@@ -1,0 +1,51 @@
+name: iOS Build
+
+on:
+    pull_request:
+        branches: [ master ]
+  
+jobs:
+    build:
+      runs-on: macos-latest
+      strategy:
+        matrix:
+          node-version: [18.x]
+  
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+  
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+            node-version-file: ".nvmrc"
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm  # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+  
+      - name: Install dependencies
+        run: yarn install --no-immutable
+
+      - name: Cache Pods
+        uses: actions/cache@v2
+        with:
+          path: apps/mobile/ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
+
+      - name: Install CocoaPods
+        run: |
+          cd apps/mobile/ios && pod install && cd ../../..
+  
+      - name: Build iOS app
+        run: |
+          cd apps/mobile/ios
+          xcodebuild -resolvePackageDependencies -workspace ./jupiter_mobile.xcworkspace -scheme jupiter_mobile
+          xcodebuild -showBuildSettings -workspace ./jupiter_mobile.xcworkspace -scheme jupiter_mobile
+          cd ../../..

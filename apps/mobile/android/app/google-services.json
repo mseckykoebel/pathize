@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "231449286183",
+    "project_id": "jupiterdx-mobile",
+    "storage_bucket": "jupiterdx-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231449286183:android:479fa04616419999926002",
+        "android_client_info": {
+          "package_name": "com.jupiter_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231449286183-32u3v4rk0c7i5p9r6b7sp95fpuaq3i8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0uFqwogtOySOWyBiMWR2CNRvVfE2GsoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231449286183-32u3v4rk0c7i5p9r6b7sp95fpuaq3i8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

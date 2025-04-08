@@ -1,0 +1,94 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+# The solution below had to be done in order to build. Useful for later.
+# https://stackoverflow.com/questions/57378549/provisioning-profile-error-in-xcode-11-beta
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc 'Fetch certificates and provisioning profiles.'
+  lane :certificates do
+    match(app_identifier: ["com.jupiterdx.jupiter-mobile", "com.jupiterdx.jupiter-mobile.watchkitapp"], type: "appstore")
+  end
+
+  lane :certificates_watchkit do
+    match(
+      app_identifier: "com.jupiterdx.jupiter-mobile.watchkitapp",
+      type: "appstore",
+    )
+  end
+
+  desc "Build the iOS and Apple Watch app."
+  lane :build do
+    require 'dotenv'
+    env_option = ENV['FL_ENV']
+    env_file = "../../.env" + (env_option ? ".#{env_option}" : "")
+    Dotenv.load(env_file)
+
+    api_environment = "staging"
+    if ENV["ENVIRONMENT"] == "production"
+      api_environment = "production"
+    end
+    ENV["ENVFILE"] = ".env.#{api_environment}"
+    puts "API_HOST: #{ENV['API_HOST']}"
+    puts "ENVIRONMENT: #{ENV['ENVIRONMENT']}"
+    puts "ENVFILE: #{ENV['ENVFILE']}"
+    puts "api_environment: #{api_environment}"
+    puts "scheme: jupiter_mobile_#{api_environment}"
+
+    # RUN CERTIFICATES
+    certificates
+    # CREATE BUILD
+    gym(
+      export_method: 'app-store',
+      xcargs: "-allowProvisioningUpdates",
+      scheme: "jupiter_mobile_#{api_environment}",
+    )
+  end
+
+  desc "Build the iOS and Apple Watch app, and upload to TestFlight."
+  lane :beta do
+    require 'dotenv'
+    env_option = ENV['FL_ENV']
+    env_file = "../../.env" + (env_option ? ".#{env_option}" : "")
+    Dotenv.load(env_file)
+
+    api_environment = "staging"
+    if ENV["ENVIRONMENT"] == "production"
+      api_environment = "production"
+    end
+    ENV["ENVFILE"] = ".env.#{api_environment}"
+    puts "API_HOST: #{ENV['API_HOST']}"
+    puts "ENVIRONMENT: #{ENV['ENVIRONMENT']}"
+    puts "ENVFILE: #{ENV['ENVFILE']}"
+    puts "api_environment: #{api_environment}"
+    puts "scheme: jupiter_mobile_#{api_environment}"
+
+    # RUN CERTIFICATES
+    certificates
+    # CREATE BUILD
+    gym(
+      export_method: 'app-store',
+      xcargs: "-allowProvisioningUpdates",
+      scheme: "jupiter_mobile_#{api_environment}",
+    )
+    app_store_connect_api_key(
+      is_key_content_base64: true,
+    )
+    pilot
+  end
+end

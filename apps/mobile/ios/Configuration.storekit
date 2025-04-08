@@ -1,0 +1,146 @@
+{
+  "identifier" : "4DAF0363",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1665320917",
+    "_billingGracePeriodEnabled" : false,
+    "_billingIssuesEnabled" : false,
+    "_compatibilityTimeRate" : {
+      "3" : 6
+    },
+    "_developerTeamID" : "8L4N7C29RW",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 719178130.17512,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : {
+          "index" : 3,
+          "type" : "generic"
+        },
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : {
+          "index" : 3,
+          "type" : "generic"
+        },
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ],
+    "_timeRate" : 13
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21385262",
+      "localizations" : [
+
+      ],
+      "name" : "Pathize subscription",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+            {
+              "internalID" : "F5B25C64",
+              "numberOfPeriods" : 1,
+              "offerID" : "p_free_3m_v1",
+              "paymentMode" : "free",
+              "referenceName" : "Pathize monthly subscription with three free months",
+              "subscriptionPeriod" : "P3M"
+            },
+            {
+              "internalID" : "5A1DC4C7",
+              "numberOfPeriods" : 1,
+              "offerID" : "p_free_1m_v1",
+              "paymentMode" : "free",
+              "referenceName" : "Pathize monthly subscription with a free month",
+              "subscriptionPeriod" : "P1M"
+            }
+          ],
+          "codeOffers" : [
+            {
+              "eligibility" : [
+                "new"
+              ],
+              "internalID" : "5B6C93A9",
+              "isStackable" : false,
+              "numberOfPeriods" : 1,
+              "paymentMode" : "free",
+              "referenceName" : "Pathize monthly subscription with a free month offer code",
+              "subscriptionPeriod" : "P1M"
+            }
+          ],
+          "displayPrice" : "14.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6468063524",
+          "introductoryOffer" : {
+            "internalID" : "C8316EC9",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P2W"
+          },
+          "localizations" : [
+            {
+              "description" : "Pathize monthly subscription",
+              "displayName" : "Pathize",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "p_1499_1m_v1",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pathize monthly subscription ",
+          "subscriptionGroupID" : "21385262",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

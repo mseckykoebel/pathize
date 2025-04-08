@@ -1,0 +1,7 @@
+-- AlterTable
+ALTER TABLE `notification_logs` MODIFY `notification_option` ENUM('MAXHR', 'MINHR', 'HR_LIMIT', 'MORNING_REMINDER', 'EVENING_REMINDER', 'ENERGY') NOT NULL;
+
+-- AlterTable
+ALTER TABLE `notifications` ADD COLUMN `time` DATETIME(3) NULL,
+    MODIFY `option` ENUM('MAXHR', 'MINHR', 'HR_LIMIT', 'MORNING_REMINDER', 'EVENING_REMINDER', 'ENERGY') NOT NULL,
+    MODIFY `enabled` BOOLEAN NOT NULL DEFAULT true;

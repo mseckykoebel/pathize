@@ -1,0 +1,1571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* jupiter_mobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* jupiter_mobileTests.m */; };
+		05825BBF1CD2AAA0A98B8807 /* Pods_jupiter_mobile_jupiter_mobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A90A80FDEBA08E85B6C0D42 /* Pods_jupiter_mobile_jupiter_mobileTests.framework */; };
+		0824DBC84870815A086759F9 /* Pods_jupiter_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3368624ABB4917F9BA306BF7 /* Pods_jupiter_mobile.framework */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		20FEE493F02544D488800EA7 /* CircularStd-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5873B608C02491BA3BB2F5B /* CircularStd-BlackItalic.otf */; };
+		211B9FB22A9E411A0043BDFC /* AWCManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 211B9FB02A9E411A0043BDFC /* AWCManager.mm */; };
+		211B9FB32A9E411A0043BDFC /* AWCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B9FB12A9E411A0043BDFC /* AWCManager.swift */; };
+		219996662AAB9F1500EDE346 /* jupiter_watchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996652AAB9F1500EDE346 /* jupiter_watchApp.swift */; };
+		219996682AAB9F1500EDE346 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996672AAB9F1500EDE346 /* ContentView.swift */; };
+		2199966A2AAB9F1600EDE346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219996692AAB9F1600EDE346 /* Assets.xcassets */; };
+		2199966D2AAB9F1600EDE346 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2199966C2AAB9F1600EDE346 /* Preview Assets.xcassets */; };
+		219996772AAB9F1700EDE346 /* jupiter_watch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996762AAB9F1700EDE346 /* jupiter_watch_Watch_AppTests.swift */; };
+		219996812AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996802AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITests.swift */; };
+		219996832AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996822AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITestsLaunchTests.swift */; };
+		219996862AAB9F1700EDE346 /* Pathize.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 219996632AAB9F1500EDE346 /* Pathize.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		219996942AABB18400EDE346 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996932AABB18400EDE346 /* Fetcher.swift */; };
+		219996962AABB1FD00EDE346 /* environment.strings in Resources */ = {isa = PBXBuildFile; fileRef = 219996952AABB1FD00EDE346 /* environment.strings */; };
+		219996982AABB21300EDE346 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996972AABB21300EDE346 /* Environment.swift */; };
+		2199969B2AABB26700EDE346 /* getEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199969A2AABB26700EDE346 /* getEnvironment.swift */; };
+		2199969E2AABB28F00EDE346 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199969D2AABB28F00EDE346 /* ActivityManager.swift */; };
+		219996A02AABB2A500EDE346 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199969F2AABB2A500EDE346 /* ConnectivityManager.swift */; };
+		219996A22AABB2BD00EDE346 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996A12AABB2BD00EDE346 /* StorageManager.swift */; };
+		219996A52AABB2E600EDE346 /* ActivityViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996A42AABB2E600EDE346 /* ActivityViewType.swift */; };
+		219996A72AABB2FA00EDE346 /* PathizeActivityRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996A62AABB2FA00EDE346 /* PathizeActivityRecord.swift */; };
+		219996A92AABB30D00EDE346 /* PathizeUserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996A82AABB30D00EDE346 /* PathizeUserActivity.swift */; };
+		219996AB2AABB32200EDE346 /* UserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996AA2AABB32200EDE346 /* UserActivity.swift */; };
+		219996AD2AABB33800EDE346 /* UserTrackedActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996AC2AABB33800EDE346 /* UserTrackedActivity.swift */; };
+		219996AF2AABB34A00EDE346 /* UtilityTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996AE2AABB34A00EDE346 /* UtilityTypes.swift */; };
+		219996B22AABB36B00EDE346 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996B12AABB36B00EDE346 /* ComingSoonView.swift */; };
+		219996B42AABB37D00EDE346 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996B32AABB37D00EDE346 /* ControlsView.swift */; };
+		219996B62AABB39400EDE346 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996B52AABB39400EDE346 /* ElapsedTimeView.swift */; };
+		219996B82AABB3B800EDE346 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996B72AABB3B800EDE346 /* MetricsView.swift */; };
+		219996BA2AABB3D600EDE346 /* needAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996B92AABB3D600EDE346 /* needAuthorizationView.swift */; };
+		219996BC2AABB3E700EDE346 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996BB2AABB3E700EDE346 /* PreferencesView.swift */; };
+		219996BE2AABB3FB00EDE346 /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996BD2AABB3FB00EDE346 /* SaveView.swift */; };
+		219996C02AABB47300EDE346 /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996BF2AABB47300EDE346 /* SessionPagingView.swift */; };
+		219996C22AABB48600EDE346 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996C12AABB48600EDE346 /* StartView.swift */; };
+		219996C42AABB49B00EDE346 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996C32AABB49B00EDE346 /* SummaryView.swift */; };
+		219996C62AABB4A900EDE346 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219996C52AABB4A900EDE346 /* TestView.swift */; };
+		219C58D82AB3DCD00063E7D6 /* ConnectivityManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C58D72AB3DCD00063E7D6 /* ConnectivityManagerExtension.swift */; };
+		21F0B2BD2AB2620100C50737 /* ActivityManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0B2BC2AB2620100C50737 /* ActivityManagerExtension.swift */; };
+		38A918986E8444F7B62688A8 /* CooperBT-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBDE48CDBB254702BF6A3BC2 /* CooperBT-Light.otf */; };
+		673F005490C34875A45C8B34 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 283D6C98F850436385A9F3FF /* CircularStd-Medium.otf */; };
+		70EAFEC34A4A40568FE0BB9E /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 547D1E838CCC4CEBB8B86A36 /* CircularStd-Black.otf */; };
+		8C0F566E2AD778CB0036D4BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C0F566D2AD778CB0036D4BE /* GoogleService-Info.plist */; };
+		8C37FE2229F1C4350028AC21 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C37FE2129F1C4350028AC21 /* BootSplash.storyboard */; };
+		8C77BE3A2AC5C9BD0021FB7E /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 8C77BE392AC5C9BD0021FB7E /* Configuration.storekit */; };
+		8C77BE412AC5FA5C0021FB7E /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 8C77BE392AC5C9BD0021FB7E /* Configuration.storekit */; };
+		8C9170902AB87AC700435CC6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C91708F2AB87AC700435CC6 /* StoreKit.framework */; };
+		8C935BDB2AD345D5004BFBF7 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 8C935BDA2AD345D5004BFBF7 /* StoreKitTestCertificate.cer */; };
+		8CCE5E722A94FBCD00BAD657 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 21280F432A8A72470067CFCF /* Config.xcconfig */; };
+		8CF52D9A2AC2104000886C0F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8CF52D992AC2104000886C0F /* README.md */; };
+		8CF52D9D2AC211B200886C0F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF52D9C2AC211B200886C0F /* Color.swift */; };
+		B75627D51ABF4E8D9692F92E /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6D9FE00B3E4C4FB01FDB0E /* CircularStd-Book.otf */; };
+		BE147952D1194921BBD4A201 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C446DF3E414C4F20B54341A0 /* CircularStd-Bold.otf */; };
+		BE429ED57E794C019FC1960B /* CircularStd-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 61B9A934765C40E89D0FEA30 /* CircularStd-MediumItalic.otf */; };
+		E3588B1529D74A7C8D75CCA2 /* CircularStd-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1D0B3D534B48FB96D5C394 /* CircularStd-BookItalic.otf */; };
+		F77AFCCEDAC94A1A977081BF /* CircularStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B2BD6995E794D43B1513957 /* CircularStd-BoldItalic.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = jupiter_mobile;
+		};
+		219996732AAB9F1700EDE346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 219996622AAB9F1500EDE346;
+			remoteInfo = "jupiter_watch Watch App";
+		};
+		2199967D2AAB9F1700EDE346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 219996622AAB9F1500EDE346;
+			remoteInfo = "jupiter_watch Watch App";
+		};
+		219996842AAB9F1700EDE346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 219996622AAB9F1500EDE346;
+			remoteInfo = "jupiter_watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C533D5F2A70758400D11FF3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				219996862AAB9F1700EDE346 /* Pathize.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* jupiter_mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jupiter_mobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* jupiter_mobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jupiter_mobileTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Pathize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pathize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = jupiter_mobile/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = jupiter_mobile/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = jupiter_mobile/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = jupiter_mobile/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = jupiter_mobile/main.m; sourceTree = "<group>"; };
+		211B9FB02A9E411A0043BDFC /* AWCManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AWCManager.mm; sourceTree = "<group>"; };
+		211B9FB12A9E411A0043BDFC /* AWCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCManager.swift; sourceTree = "<group>"; };
+		21280F432A8A72470067CFCF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		21390C232A9855D10054DB07 /* jupiter_mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jupiter_mobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		219996632AAB9F1500EDE346 /* Pathize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pathize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		219996652AAB9F1500EDE346 /* jupiter_watchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jupiter_watchApp.swift; sourceTree = "<group>"; };
+		219996672AAB9F1500EDE346 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		219996692AAB9F1600EDE346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2199966C2AAB9F1600EDE346 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		219996722AAB9F1700EDE346 /* jupiter_watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jupiter_watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		219996762AAB9F1700EDE346 /* jupiter_watch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jupiter_watch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		2199967C2AAB9F1700EDE346 /* jupiter_watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jupiter_watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		219996802AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jupiter_watch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		219996822AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jupiter_watch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		219996902AABA09000EDE346 /* jupiter-watch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "jupiter-watch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		219996912AABA0A200EDE346 /* jupiter_watch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "jupiter_watch Watch App.entitlements"; sourceTree = "<group>"; };
+		219996932AABB18400EDE346 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		219996952AABB1FD00EDE346 /* environment.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = environment.strings; sourceTree = "<group>"; };
+		219996972AABB21300EDE346 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		2199969A2AABB26700EDE346 /* getEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getEnvironment.swift; sourceTree = "<group>"; };
+		2199969D2AABB28F00EDE346 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		2199969F2AABB2A500EDE346 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		219996A12AABB2BD00EDE346 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		219996A42AABB2E600EDE346 /* ActivityViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewType.swift; sourceTree = "<group>"; };
+		219996A62AABB2FA00EDE346 /* PathizeActivityRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathizeActivityRecord.swift; sourceTree = "<group>"; };
+		219996A82AABB30D00EDE346 /* PathizeUserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathizeUserActivity.swift; sourceTree = "<group>"; };
+		219996AA2AABB32200EDE346 /* UserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivity.swift; sourceTree = "<group>"; };
+		219996AC2AABB33800EDE346 /* UserTrackedActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTrackedActivity.swift; sourceTree = "<group>"; };
+		219996AE2AABB34A00EDE346 /* UtilityTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTypes.swift; sourceTree = "<group>"; };
+		219996B12AABB36B00EDE346 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
+		219996B32AABB37D00EDE346 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		219996B52AABB39400EDE346 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		219996B72AABB3B800EDE346 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		219996B92AABB3D600EDE346 /* needAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needAuthorizationView.swift; sourceTree = "<group>"; };
+		219996BB2AABB3E700EDE346 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		219996BD2AABB3FB00EDE346 /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
+		219996BF2AABB47300EDE346 /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		219996C12AABB48600EDE346 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		219996C32AABB49B00EDE346 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		219996C52AABB4A900EDE346 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		219C58D72AB3DCD00063E7D6 /* ConnectivityManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManagerExtension.swift; sourceTree = "<group>"; };
+		21F0B2BC2AB2620100C50737 /* ActivityManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManagerExtension.swift; sourceTree = "<group>"; };
+		283D6C98F850436385A9F3FF /* CircularStd-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Medium.otf"; path = "../assets/fonts/CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		3368624ABB4917F9BA306BF7 /* Pods_jupiter_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jupiter_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A90A80FDEBA08E85B6C0D42 /* Pods_jupiter_mobile_jupiter_mobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jupiter_mobile_jupiter_mobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5341CFF53212C419C9506C48 /* Pods-jupiter_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jupiter_mobile.release.xcconfig"; path = "Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile.release.xcconfig"; sourceTree = "<group>"; };
+		547D1E838CCC4CEBB8B86A36 /* CircularStd-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Black.otf"; path = "../assets/fonts/CircularStd-Black.otf"; sourceTree = "<group>"; };
+		5B95B6224896976C13D5C069 /* Pods-jupiter_mobile-jupiter_mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jupiter_mobile-jupiter_mobileTests.release.xcconfig"; path = "Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		61B9A934765C40E89D0FEA30 /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-MediumItalic.otf"; path = "../assets/fonts/CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
+		7B2BD6995E794D43B1513957 /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-BoldItalic.otf"; path = "../assets/fonts/CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		8C0F566D2AD778CB0036D4BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8C37FE2129F1C4350028AC21 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = jupiter_mobile/BootSplash.storyboard; sourceTree = "<group>"; };
+		8C77BE392AC5C9BD0021FB7E /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		8C91708F2AB87AC700435CC6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8C935BDA2AD345D5004BFBF7 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = StoreKitTestCertificate.cer; path = ../../../../../Downloads/StoreKitTestCertificate.cer; sourceTree = "<group>"; };
+		8CA4664F297F474E00FE09F0 /* jupiter_mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = jupiter_mobile.entitlements; path = jupiter_mobile/jupiter_mobile.entitlements; sourceTree = "<group>"; };
+		8CBC418829E5D9D400010BEC /* jupiter_mobileDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = jupiter_mobileDebug.entitlements; path = jupiter_mobile/jupiter_mobileDebug.entitlements; sourceTree = "<group>"; };
+		8CF52D992AC2104000886C0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8CF52D9C2AC211B200886C0F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9A6D9FE00B3E4C4FB01FDB0E /* CircularStd-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Book.otf"; path = "../assets/fonts/CircularStd-Book.otf"; sourceTree = "<group>"; };
+		9D1D0B3D534B48FB96D5C394 /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-BookItalic.otf"; path = "../assets/fonts/CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
+		AA571E732DEE0EF570E983B1 /* Pods-jupiter_mobile-jupiter_mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jupiter_mobile-jupiter_mobileTests.debug.xcconfig"; path = "Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C446DF3E414C4F20B54341A0 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Bold.otf"; path = "../assets/fonts/CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		E5873B608C02491BA3BB2F5B /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-BlackItalic.otf"; path = "../assets/fonts/CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F56AECDD012E4DEE444C7B85 /* Pods-jupiter_mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jupiter_mobile.debug.xcconfig"; path = "Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		FBDE48CDBB254702BF6A3BC2 /* CooperBT-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CooperBT-Light.otf"; path = "../assets/fonts/CooperBT-Light.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05825BBF1CD2AAA0A98B8807 /* Pods_jupiter_mobile_jupiter_mobileTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0824DBC84870815A086759F9 /* Pods_jupiter_mobile.framework in Frameworks */,
+				8C9170902AB87AC700435CC6 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		219996602AAB9F1500EDE346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2199966F2AAB9F1700EDE346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		219996792AAB9F1700EDE346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* jupiter_mobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* jupiter_mobileTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = jupiter_mobileTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* jupiter_mobile */ = {
+			isa = PBXGroup;
+			children = (
+				211B9FB02A9E411A0043BDFC /* AWCManager.mm */,
+				211B9FB12A9E411A0043BDFC /* AWCManager.swift */,
+				8C37FE2129F1C4350028AC21 /* BootSplash.storyboard */,
+				8CBC418829E5D9D400010BEC /* jupiter_mobileDebug.entitlements */,
+				8CA4664F297F474E00FE09F0 /* jupiter_mobile.entitlements */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				21390C232A9855D10054DB07 /* jupiter_mobile-Bridging-Header.h */,
+			);
+			name = jupiter_mobile;
+			sourceTree = "<group>";
+		};
+		219996642AAB9F1500EDE346 /* jupiter_watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				8CF52D9B2AC211A800886C0F /* Ui */,
+				219996B02AABB35A00EDE346 /* Views */,
+				219996A32AABB2D600EDE346 /* Types */,
+				2199969C2AABB27D00EDE346 /* Managers */,
+				219996992AABB25500EDE346 /* lib */,
+				219996922AABB17500EDE346 /* api */,
+				219996912AABA0A200EDE346 /* jupiter_watch Watch App.entitlements */,
+				219996902AABA09000EDE346 /* jupiter-watch-Watch-App-Info.plist */,
+				219996652AAB9F1500EDE346 /* jupiter_watchApp.swift */,
+				219996672AAB9F1500EDE346 /* ContentView.swift */,
+				219996692AAB9F1600EDE346 /* Assets.xcassets */,
+				2199966B2AAB9F1600EDE346 /* Preview Content */,
+				219996952AABB1FD00EDE346 /* environment.strings */,
+				219996972AABB21300EDE346 /* Environment.swift */,
+				8CF52D992AC2104000886C0F /* README.md */,
+			);
+			path = "jupiter_watch Watch App";
+			sourceTree = "<group>";
+		};
+		2199966B2AAB9F1600EDE346 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2199966C2AAB9F1600EDE346 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		219996752AAB9F1700EDE346 /* jupiter_watch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				219996762AAB9F1700EDE346 /* jupiter_watch_Watch_AppTests.swift */,
+			);
+			path = "jupiter_watch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		2199967F2AAB9F1700EDE346 /* jupiter_watch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				219996802AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITests.swift */,
+				219996822AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "jupiter_watch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		219996922AABB17500EDE346 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				219996932AABB18400EDE346 /* Fetcher.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		219996992AABB25500EDE346 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2199969A2AABB26700EDE346 /* getEnvironment.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		2199969C2AABB27D00EDE346 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2199969D2AABB28F00EDE346 /* ActivityManager.swift */,
+				2199969F2AABB2A500EDE346 /* ConnectivityManager.swift */,
+				219996A12AABB2BD00EDE346 /* StorageManager.swift */,
+				21F0B2BC2AB2620100C50737 /* ActivityManagerExtension.swift */,
+				219C58D72AB3DCD00063E7D6 /* ConnectivityManagerExtension.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		219996A32AABB2D600EDE346 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				219996A42AABB2E600EDE346 /* ActivityViewType.swift */,
+				219996A62AABB2FA00EDE346 /* PathizeActivityRecord.swift */,
+				219996A82AABB30D00EDE346 /* PathizeUserActivity.swift */,
+				219996AA2AABB32200EDE346 /* UserActivity.swift */,
+				219996AC2AABB33800EDE346 /* UserTrackedActivity.swift */,
+				219996AE2AABB34A00EDE346 /* UtilityTypes.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		219996B02AABB35A00EDE346 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				219996B12AABB36B00EDE346 /* ComingSoonView.swift */,
+				219996B32AABB37D00EDE346 /* ControlsView.swift */,
+				219996B52AABB39400EDE346 /* ElapsedTimeView.swift */,
+				219996B72AABB3B800EDE346 /* MetricsView.swift */,
+				219996B92AABB3D600EDE346 /* needAuthorizationView.swift */,
+				219996BB2AABB3E700EDE346 /* PreferencesView.swift */,
+				219996BD2AABB3FB00EDE346 /* SaveView.swift */,
+				219996BF2AABB47300EDE346 /* SessionPagingView.swift */,
+				219996C12AABB48600EDE346 /* StartView.swift */,
+				219996C32AABB49B00EDE346 /* SummaryView.swift */,
+				219996C52AABB4A900EDE346 /* TestView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C91708F2AB87AC700435CC6 /* StoreKit.framework */,
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				3368624ABB4917F9BA306BF7 /* Pods_jupiter_mobile.framework */,
+				4A90A80FDEBA08E85B6C0D42 /* Pods_jupiter_mobile_jupiter_mobileTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+			usesTabs = 0;
+			wrapsLines = 1;
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				8C0F566D2AD778CB0036D4BE /* GoogleService-Info.plist */,
+				8C77BE392AC5C9BD0021FB7E /* Configuration.storekit */,
+				8C935BDA2AD345D5004BFBF7 /* StoreKitTestCertificate.cer */,
+				21280F432A8A72470067CFCF /* Config.xcconfig */,
+				13B07FAE1A68108700A75B9A /* jupiter_mobile */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* jupiter_mobileTests */,
+				219996642AAB9F1500EDE346 /* jupiter_watch Watch App */,
+				219996752AAB9F1700EDE346 /* jupiter_watch Watch AppTests */,
+				2199967F2AAB9F1700EDE346 /* jupiter_watch Watch AppUITests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				EE942CB93C8C44BBB1B045F5 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Pathize.app */,
+				00E356EE1AD99517003FC87E /* jupiter_mobileTests.xctest */,
+				219996632AAB9F1500EDE346 /* Pathize.app */,
+				219996722AAB9F1700EDE346 /* jupiter_watch Watch AppTests.xctest */,
+				2199967C2AAB9F1700EDE346 /* jupiter_watch Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CF52D9B2AC211A800886C0F /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				8CF52D9C2AC211B200886C0F /* Color.swift */,
+			);
+			path = Ui;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F56AECDD012E4DEE444C7B85 /* Pods-jupiter_mobile.debug.xcconfig */,
+				5341CFF53212C419C9506C48 /* Pods-jupiter_mobile.release.xcconfig */,
+				AA571E732DEE0EF570E983B1 /* Pods-jupiter_mobile-jupiter_mobileTests.debug.xcconfig */,
+				5B95B6224896976C13D5C069 /* Pods-jupiter_mobile-jupiter_mobileTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE942CB93C8C44BBB1B045F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				547D1E838CCC4CEBB8B86A36 /* CircularStd-Black.otf */,
+				E5873B608C02491BA3BB2F5B /* CircularStd-BlackItalic.otf */,
+				C446DF3E414C4F20B54341A0 /* CircularStd-Bold.otf */,
+				7B2BD6995E794D43B1513957 /* CircularStd-BoldItalic.otf */,
+				9A6D9FE00B3E4C4FB01FDB0E /* CircularStd-Book.otf */,
+				9D1D0B3D534B48FB96D5C394 /* CircularStd-BookItalic.otf */,
+				283D6C98F850436385A9F3FF /* CircularStd-Medium.otf */,
+				61B9A934765C40E89D0FEA30 /* CircularStd-MediumItalic.otf */,
+				FBDE48CDBB254702BF6A3BC2 /* CooperBT-Light.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* jupiter_mobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "jupiter_mobileTests" */;
+			buildPhases = (
+				919D3A44F5B6E63EFAFD60B9 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				82F4A7179CC000EE3EEDE7A0 /* [CP] Embed Pods Frameworks */,
+				8C168E45EC935851FBC8B9F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = jupiter_mobileTests;
+			productName = jupiter_mobileTests;
+			productReference = 00E356EE1AD99517003FC87E /* jupiter_mobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* jupiter_mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "jupiter_mobile" */;
+			buildPhases = (
+				C0034059149DD275540B1096 /* [CP] Check Pods Manifest.lock */,
+				8C27DE022AB0C7F100485132 /* ShellScript */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				8C533D5F2A70758400D11FF3 /* Embed Watch Content */,
+				06CC0255631758ED876162B8 /* [CP] Embed Pods Frameworks */,
+				E7B618B0FEEB74902789E7C6 /* [CP] Copy Pods Resources */,
+				5FC03CCED7A281B0327A75F7 /* [CP-User] [RNFB] Core Configuration */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				219996852AAB9F1700EDE346 /* PBXTargetDependency */,
+			);
+			name = jupiter_mobile;
+			productName = jupiter_mobile;
+			productReference = 13B07F961A680F5B00A75B9A /* Pathize.app */;
+			productType = "com.apple.product-type.application";
+		};
+		219996622AAB9F1500EDE346 /* jupiter_watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2199968D2AAB9F1800EDE346 /* Build configuration list for PBXNativeTarget "jupiter_watch Watch App" */;
+			buildPhases = (
+				2199965F2AAB9F1500EDE346 /* Sources */,
+				219996602AAB9F1500EDE346 /* Frameworks */,
+				219996612AAB9F1500EDE346 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "jupiter_watch Watch App";
+			productName = "jupiter_watch Watch App";
+			productReference = 219996632AAB9F1500EDE346 /* Pathize.app */;
+			productType = "com.apple.product-type.application";
+		};
+		219996712AAB9F1700EDE346 /* jupiter_watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2199968E2AAB9F1800EDE346 /* Build configuration list for PBXNativeTarget "jupiter_watch Watch AppTests" */;
+			buildPhases = (
+				2199966E2AAB9F1700EDE346 /* Sources */,
+				2199966F2AAB9F1700EDE346 /* Frameworks */,
+				219996702AAB9F1700EDE346 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				219996742AAB9F1700EDE346 /* PBXTargetDependency */,
+			);
+			name = "jupiter_watch Watch AppTests";
+			productName = "jupiter_watch Watch AppTests";
+			productReference = 219996722AAB9F1700EDE346 /* jupiter_watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2199967B2AAB9F1700EDE346 /* jupiter_watch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2199968F2AAB9F1800EDE346 /* Build configuration list for PBXNativeTarget "jupiter_watch Watch AppUITests" */;
+			buildPhases = (
+				219996782AAB9F1700EDE346 /* Sources */,
+				219996792AAB9F1700EDE346 /* Frameworks */,
+				2199967A2AAB9F1700EDE346 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2199967E2AAB9F1700EDE346 /* PBXTargetDependency */,
+			);
+			name = "jupiter_watch Watch AppUITests";
+			productName = "jupiter_watch Watch AppUITests";
+			productReference = 2199967C2AAB9F1700EDE346 /* jupiter_watch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1430;
+					};
+					219996622AAB9F1500EDE346 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					219996712AAB9F1700EDE346 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 219996622AAB9F1500EDE346;
+					};
+					2199967B2AAB9F1700EDE346 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 219996622AAB9F1500EDE346;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "jupiter_mobile" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* jupiter_mobile */,
+				00E356ED1AD99517003FC87E /* jupiter_mobileTests */,
+				219996622AAB9F1500EDE346 /* jupiter_watch Watch App */,
+				219996712AAB9F1700EDE346 /* jupiter_watch Watch AppTests */,
+				2199967B2AAB9F1700EDE346 /* jupiter_watch Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C77BE412AC5FA5C0021FB7E /* Configuration.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8C77BE3A2AC5C9BD0021FB7E /* Configuration.storekit in Resources */,
+				8C37FE2229F1C4350028AC21 /* BootSplash.storyboard in Resources */,
+				8CCE5E722A94FBCD00BAD657 /* Config.xcconfig in Resources */,
+				8C935BDB2AD345D5004BFBF7 /* StoreKitTestCertificate.cer in Resources */,
+				70EAFEC34A4A40568FE0BB9E /* CircularStd-Black.otf in Resources */,
+				20FEE493F02544D488800EA7 /* CircularStd-BlackItalic.otf in Resources */,
+				8C0F566E2AD778CB0036D4BE /* GoogleService-Info.plist in Resources */,
+				BE147952D1194921BBD4A201 /* CircularStd-Bold.otf in Resources */,
+				F77AFCCEDAC94A1A977081BF /* CircularStd-BoldItalic.otf in Resources */,
+				B75627D51ABF4E8D9692F92E /* CircularStd-Book.otf in Resources */,
+				E3588B1529D74A7C8D75CCA2 /* CircularStd-BookItalic.otf in Resources */,
+				673F005490C34875A45C8B34 /* CircularStd-Medium.otf in Resources */,
+				BE429ED57E794C019FC1960B /* CircularStd-MediumItalic.otf in Resources */,
+				38A918986E8444F7B62688A8 /* CooperBT-Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		219996612AAB9F1500EDE346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2199966D2AAB9F1600EDE346 /* Preview Assets.xcassets in Resources */,
+				219996962AABB1FD00EDE346 /* environment.strings in Resources */,
+				8CF52D9A2AC2104000886C0F /* README.md in Resources */,
+				2199966A2AAB9F1600EDE346 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		219996702AAB9F1700EDE346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2199967A2AAB9F1700EDE346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nexport PROJECT_ROOT=\"$PROJECT_DIR/..\"\nexport NODE_BINARY=node\nexport ENTRY_FILE=\"index.js\"\n../../../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		06CC0255631758ED876162B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FC03CCED7A281B0327A75F7 /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\n\n##########################################################################\n##########################################################################\n#\n#  NOTE THAT IF YOU CHANGE THIS FILE YOU MUST RUN pod install AFTERWARDS\n#\n#  This file is installed as an Xcode build script in the project file\n#  by cocoapods, and you will not see your changes until you pod install\n#\n##########################################################################\n##########################################################################\n\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | /usr/bin/head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    if ! python3 --version >/dev/null 2>&1; then echo \"python3 not found, firebase.json file processing error.\" && exit 1; fi\n    _JSON_OUTPUT_BASE64=$(python3 -c 'import json,sys,base64;print(base64.b64encode(bytes(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"', '\"'rb'\"').read())['${_JSON_ROOT}']), '\"'utf-8'\"')).decode())' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.app_data_collection_default_enabled\n  _APP_DATA_COLLECTION_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_data_collection_default_enabled\")\n  if [[ $_APP_DATA_COLLECTION_ENABLED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseDataCollectionDefaultEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_DATA_COLLECTION_ENABLED\")\")\n  fi\n\n  # config.analytics_auto_collection_enabled\n  _ANALYTICS_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_auto_collection_enabled\")\n  if [[ $_ANALYTICS_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_COLLECTION\")\")\n  fi\n\n  # config.analytics_collection_deactivated\n  _ANALYTICS_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_collection_deactivated\")\n  if [[ $_ANALYTICS_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_DEACTIVATED\")\")\n  fi\n\n  # config.analytics_idfv_collection_enabled\n  _ANALYTICS_IDFV_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_idfv_collection_enabled\")\n  if [[ $_ANALYTICS_IDFV_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_IDFV_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_IDFV_COLLECTION\")\")\n  fi\n\n  # config.analytics_default_allow_analytics_storage\n  _ANALYTICS_STORAGE=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_analytics_storage\")\n  if [[ $_ANALYTICS_STORAGE ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_ANALYTICS_STORAGE\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_STORAGE\")\")\n  fi\n\n  # config.analytics_default_allow_ad_storage\n  _ANALYTICS_AD_STORAGE=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_storage\")\n  if [[ $_ANALYTICS_AD_STORAGE ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_STORAGE\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AD_STORAGE\")\")\n  fi\n\n  # config.analytics_default_allow_ad_user_data\n  _ANALYTICS_AD_USER_DATA=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_user_data\")\n  if [[ $_ANALYTICS_AD_USER_DATA ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_USER_DATA\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AD_USER_DATA\")\")\n  fi\n\n  # config.analytics_default_allow_ad_personalization_signals\n  _ANALYTICS_PERSONALIZATION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_personalization_signals\")\n  if [[ $_ANALYTICS_PERSONALIZATION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_PERSONALIZATION_SIGNALS\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_PERSONALIZATION\")\")\n  fi\n\n  # config.analytics_registration_with_ad_network_enabled\n  _ANALYTICS_REGISTRATION_WITH_AD_NETWORK=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_registration_with_ad_network_enabled\")\n  if [[ $_ANALYTICS_REGISTRATION_WITH_AD_NETWORK ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_REGISTRATION_WITH_AD_NETWORK_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_REGISTRATION_WITH_AD_NETWORK\")\")\n  fi\n\n  # config.google_analytics_automatic_screen_reporting_enabled\n  _ANALYTICS_AUTO_SCREEN_REPORTING=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_automatic_screen_reporting_enabled\")\n  if [[ $_ANALYTICS_AUTO_SCREEN_REPORTING ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAutomaticScreenReportingEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_SCREEN_REPORTING\")\")\n  fi\n\n  # config.perf_auto_collection_enabled\n  _PERF_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_auto_collection_enabled\")\n  if [[ $_PERF_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_AUTO_COLLECTION\")\")\n  fi\n\n  # config.perf_collection_deactivated\n  _PERF_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_collection_deactivated\")\n  if [[ $_PERF_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_deactivated\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_DEACTIVATED\")\")\n  fi\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.in_app_messaging_auto_colllection_enabled\n  _FIAM_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"in_app_messaging_auto_collection_enabled\")\n  if [[ $_FIAM_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseInAppMessagingAutomaticDataCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_FIAM_AUTO_INIT\")\")\n  fi\n\n  # config.app_check_token_auto_refresh\n  _APP_CHECK_TOKEN_AUTO_REFRESH=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_check_token_auto_refresh\")\n  if [[ $_APP_CHECK_TOKEN_AUTO_REFRESH ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAppCheckTokenAutoRefreshEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_CHECK_TOKEN_AUTO_REFRESH\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes useful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"FirebaseCrashlyticsCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally\n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n";
+		};
+		82F4A7179CC000EE3EEDE7A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C168E45EC935851FBC8B9F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile-jupiter_mobileTests/Pods-jupiter_mobile-jupiter_mobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C27DE022AB0C7F100485132 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Clear script_output.txt\necho \"\" > \"${PROJECT_DIR}/script_output.txt\"\n\n# Paths to files\nxcconfigPath=\"${PROJECT_DIR}/tmp.xcconfig\"\nstringsFilePath=\"${PROJECT_DIR}/jupiter_watch Watch App/environment.strings\"\n\n# Ensure the xcconfig file exists\nif [ ! -f \"$xcconfigPath\" ]; then\n  echo \"Error: xcconfig path is not found at $xcconfigPath\" >> \"${PROJECT_DIR}/script_output.txt\"\n  exit 1\nfi\n\n# Ensure the .strings file exists\nif [ ! -f \"$stringsFilePath\" ]; then\n  echo \"Error: .strings file not found at $stringsFilePath\" >> \"${PROJECT_DIR}/script_output.txt\"\n  exit 1\nfi\n\n# Read the value from the tmp.xcconfig file\nenvironmentValue=$(grep \"ENVIRONMENT\" \"$xcconfigPath\" | cut -d '=' -f2 | tr -d ' ')\n\n# Write the value to the .strings file\necho \"\\\"ENVIRONMENT\\\" = \\\"$environmentValue\\\";\" > \"$stringsFilePath\"\n\n# Write the value of Environment to script_output.txt\necho \"Successfully set Environment: $environmentValue\" >> \"${PROJECT_DIR}/script_output.txt\"\n";
+		};
+		919D3A44F5B6E63EFAFD60B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-jupiter_mobile-jupiter_mobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0034059149DD275540B1096 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-jupiter_mobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7B618B0FEEB74902789E7C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jupiter_mobile/Pods-jupiter_mobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../../../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../../../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* jupiter_mobileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				211B9FB32A9E411A0043BDFC /* AWCManager.swift in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				211B9FB22A9E411A0043BDFC /* AWCManager.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2199965F2AAB9F1500EDE346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2199969B2AABB26700EDE346 /* getEnvironment.swift in Sources */,
+				219996C62AABB4A900EDE346 /* TestView.swift in Sources */,
+				21F0B2BD2AB2620100C50737 /* ActivityManagerExtension.swift in Sources */,
+				219996B22AABB36B00EDE346 /* ComingSoonView.swift in Sources */,
+				219996AB2AABB32200EDE346 /* UserActivity.swift in Sources */,
+				219996682AAB9F1500EDE346 /* ContentView.swift in Sources */,
+				219996B82AABB3B800EDE346 /* MetricsView.swift in Sources */,
+				219996C42AABB49B00EDE346 /* SummaryView.swift in Sources */,
+				219996BC2AABB3E700EDE346 /* PreferencesView.swift in Sources */,
+				8CF52D9D2AC211B200886C0F /* Color.swift in Sources */,
+				219996B62AABB39400EDE346 /* ElapsedTimeView.swift in Sources */,
+				219C58D82AB3DCD00063E7D6 /* ConnectivityManagerExtension.swift in Sources */,
+				2199969E2AABB28F00EDE346 /* ActivityManager.swift in Sources */,
+				219996C22AABB48600EDE346 /* StartView.swift in Sources */,
+				219996982AABB21300EDE346 /* Environment.swift in Sources */,
+				219996662AAB9F1500EDE346 /* jupiter_watchApp.swift in Sources */,
+				219996AF2AABB34A00EDE346 /* UtilityTypes.swift in Sources */,
+				219996C02AABB47300EDE346 /* SessionPagingView.swift in Sources */,
+				219996BE2AABB3FB00EDE346 /* SaveView.swift in Sources */,
+				219996A52AABB2E600EDE346 /* ActivityViewType.swift in Sources */,
+				219996A92AABB30D00EDE346 /* PathizeUserActivity.swift in Sources */,
+				219996942AABB18400EDE346 /* Fetcher.swift in Sources */,
+				219996A72AABB2FA00EDE346 /* PathizeActivityRecord.swift in Sources */,
+				219996B42AABB37D00EDE346 /* ControlsView.swift in Sources */,
+				219996BA2AABB3D600EDE346 /* needAuthorizationView.swift in Sources */,
+				219996AD2AABB33800EDE346 /* UserTrackedActivity.swift in Sources */,
+				219996A02AABB2A500EDE346 /* ConnectivityManager.swift in Sources */,
+				219996A22AABB2BD00EDE346 /* StorageManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2199966E2AAB9F1700EDE346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				219996772AAB9F1700EDE346 /* jupiter_watch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		219996782AAB9F1700EDE346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				219996832AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITestsLaunchTests.swift in Sources */,
+				219996812AAB9F1700EDE346 /* jupiter_watch_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* jupiter_mobile */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		219996742AAB9F1700EDE346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 219996622AAB9F1500EDE346 /* jupiter_watch Watch App */;
+			targetProxy = 219996732AAB9F1700EDE346 /* PBXContainerItemProxy */;
+		};
+		2199967E2AAB9F1700EDE346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 219996622AAB9F1500EDE346 /* jupiter_watch Watch App */;
+			targetProxy = 2199967D2AAB9F1700EDE346 /* PBXContainerItemProxy */;
+		};
+		219996852AAB9F1700EDE346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 219996622AAB9F1500EDE346 /* jupiter_watch Watch App */;
+			targetProxy = 219996842AAB9F1700EDE346 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA571E732DEE0EF570E983B1 /* Pods-jupiter_mobile-jupiter_mobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEAD_CODE_STRIPPING = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = jupiter_mobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(SDKROOT)/System/iOSSupport/usr/lib/swift",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jupiter_mobile.app/jupiter_mobile";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B95B6224896976C13D5C069 /* Pods-jupiter_mobile-jupiter_mobileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8L4N7C29RW;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 8L4N7C29RW;
+				INFOPLIST_FILE = jupiter_mobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(SDKROOT)/System/iOSSupport/usr/lib/swift",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jupiter_mobile.app/jupiter_mobile";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56AECDD012E4DEE444C7B85 /* Pods-jupiter_mobile.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = jupiter_mobile/jupiter_mobileDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 817;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 85LQ34JWTV;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = jupiter_mobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pathize;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(SDKROOT)/System/iOSSupport/usr/lib/swift",
+					"$(inherited)",
+				);
+				MARKETING_VERSION = 1.92.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-mobile";
+				PRODUCT_NAME = Pathize;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "jupiter_mobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5341CFF53212C419C9506C48 /* Pods-jupiter_mobile.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = jupiter_mobile/jupiter_mobile.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 817;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 85LQ34JWTV;
+				INFOPLIST_FILE = jupiter_mobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pathize;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
+					"$(SDKROOT)/System/iOSSupport/usr/lib/swift",
+					"$(inherited)",
+				);
+				MARKETING_VERSION = 1.92.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-mobile";
+				PRODUCT_NAME = Pathize;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "jupiter_mobile-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		219996872AAB9F1800EDE346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "jupiter_watch Watch App/jupiter_watch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"jupiter_watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=watchos*]" = 8L4N7C29RW;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "jupiter-watch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Pathize;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Pathize wants to access your health data to provide you with guidance that may help your condition.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Pathize wants to access your health data to provide you with guidance that may help your condition.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.jupiterdx.jupiter-mobile";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-mobile.watchkitapp";
+				PRODUCT_NAME = Pathize;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "match AppStore com.jupiterdx.jupiter-mobile.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		219996882AAB9F1800EDE346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "jupiter_watch Watch App/jupiter_watch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"jupiter_watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=watchos*]" = 8L4N7C29RW;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "jupiter-watch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Pathize;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Pathize wants to access your health data to provide you with guidance that may help your condition.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Pathize wants to access your health data to provide you with guidance that may help your condition.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.jupiterdx.jupiter-mobile";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-mobile.watchkitapp";
+				PRODUCT_NAME = Pathize;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "match AppStore com.jupiterdx.jupiter-mobile.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		219996892AAB9F1800EDE346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jupiter_watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/jupiter_watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		2199968A2AAB9F1800EDE346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jupiter_watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/jupiter_watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		2199968B2AAB9F1800EDE346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "jupiter_watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		2199968C2AAB9F1800EDE346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jupiterdx.jupiter-watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "jupiter_watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21280F432A8A72470067CFCF /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "$(inherited)  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21280F432A8A72470067CFCF /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "$(inherited)  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "jupiter_mobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "jupiter_mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2199968D2AAB9F1800EDE346 /* Build configuration list for PBXNativeTarget "jupiter_watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				219996872AAB9F1800EDE346 /* Debug */,
+				219996882AAB9F1800EDE346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2199968E2AAB9F1800EDE346 /* Build configuration list for PBXNativeTarget "jupiter_watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				219996892AAB9F1800EDE346 /* Debug */,
+				2199968A2AAB9F1800EDE346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2199968F2AAB9F1800EDE346 /* Build configuration list for PBXNativeTarget "jupiter_watch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2199968B2AAB9F1800EDE346 /* Debug */,
+				2199968C2AAB9F1800EDE346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "jupiter_mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

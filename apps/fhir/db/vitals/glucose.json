@@ -1,0 +1,9 @@
+[
+    {
+      "id": 2,
+      "timestamp": "2022-04-20T13:02:01.123664+00:00",
+      "value": "0.50",
+      "type": "automatic | manual_scan",
+      "unit": "mg/dL"
+    }
+  ]

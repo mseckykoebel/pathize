@@ -1,0 +1,40 @@
+# fly.toml app configuration file generated for jupiter-api on 2023-07-03T12:57:04-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "jupiter-api"
+primary_region = "ord"
+kill_signal = "SIGINT"
+kill_timeout = "5s"
+
+[experimental]
+  auto_rollback = true
+
+[deploy]
+  release_command = "yarn workspace @pathize/api db:push"
+  strategy = "rolling"
+
+[env]
+  PORT = "8080"
+
+[build.args]
+  NODE_ENV = "production"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 200
+    hard_limit = 250
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "60s"
+    method = "GET"
+    timeout = "5s"
+    path = "/"

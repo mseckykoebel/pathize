@@ -1,0 +1,27 @@
+fastlane/report.xml
+
+fastlane/Preview.html
+
+fastlane/screenshos
+
+fastlane/test_output
+
+fastlane/README.md
+
+fastlane/.env
+
+matchfile/
+
+builds/*
+
+*.xarchive
+
+.env.default
+.env
+
+# react-native-config codegen
+tmp.xcconfig
+
+# custom run script output
+script_output.txt
+

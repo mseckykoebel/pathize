@@ -1,0 +1,213 @@
+[
+  { "name": "Blessed Thistle", "id": "7c30a29d-158f-45ef-8ebe-0ffe3df3fcc1" },
+  { "name": "Berberine", "id": "44d637e0-fa48-496b-b91f-28f272bf4662" },
+  { "name": "Belladonna", "id": "b58dbba6-227f-4a70-b7a2-4af1995a5d25" },
+  { "name": "Black Psyllium", "id": "799b1bba-6c8f-4adf-ad64-7d5bdccb143c" },
+  { "name": "Black Seed", "id": "b0b6a23e-cecf-4b2b-a616-83f603a20195" },
+  {
+    "name": "Bifidobacterium animalis subsp. lactis",
+    "id": "90c87d57-0055-4600-b51c-e1b37c72b7b2"
+  },
+  { "name": "Bee Pollen", "id": "7b781bbd-73df-4960-a19d-3459e3f96e3c" },
+  { "name": "Biotin", "id": "b5d6f857-0a2e-4a6f-b8d4-77fa92325f25" },
+  { "name": "Bitter Melon", "id": "c0f338b4-9c2e-4475-a6bf-541b6f54d195" },
+  { "name": "Black Tea", "id": "9a59e5f0-7e7d-49c1-b29f-90e553b980d2" },
+  { "name": "Beta-Carotene", "id": "ca730412-039c-4c83-8bbc-41b1f9372773" },
+  {
+    "name": "Bacillus Coagulans",
+    "id": "cab8a426-2f18-4560-9204-5fa74ce7f986"
+  },
+  { "name": "5-HTP", "id": "6de70809-6eaa-4bd8-9e77-f20286e3253e" },
+  { "name": "Yerba Mate", "id": "622a6da7-3210-411f-82b0-65d3eeb362b2" },
+  { "name": "Willow Bark", "id": "5a6f36df-ef89-428e-af3a-b5c5edb81c76" },
+  { "name": "Wild Yam", "id": "a1f2abdc-630a-4729-9380-8e735f7eeb4f" },
+  { "name": "Whey Protein", "id": "bf6a8ee8-ce33-4ee3-9bb3-9d96188d3f98" },
+  { "name": "Vitamin B6", "id": "b1268a56-2e3b-423b-a0ae-c06fb0ed04bb" },
+  { "name": "Stevia", "id": "711aa3bd-a3fc-47dd-8b5e-74b94be0f986" },
+  { "name": "Zinc", "id": "826a4eaa-c594-4048-8097-e6650017e2a6" },
+  { "name": "Slippery Elm", "id": "35f7b8f5-d50c-4e5e-92c3-ed84d7d9a700" },
+  { "name": "Spearmint", "id": "ce682116-e3d5-4536-a9d9-bd27ca813708" },
+  { "name": "Shark Cartilage", "id": "5cb01f2b-2dcb-4bd2-a274-2abc0dd18aa9" },
+  { "name": "Senna", "id": "454dada4-c58e-4bfb-a504-d4f625bfb5ea" },
+  {
+    "name": "Saccharomyces Boulardii",
+    "id": "d36dc872-cd78-46f9-aff9-5a8253d0ef5e"
+  },
+  { "name": "Rose Hip", "id": "f691e46c-f7bf-4915-ac8e-90bfef2826aa" },
+  { "name": "Roman Chamomile", "id": "3c667838-0b29-43c7-9a74-940523fc10e5" },
+  { "name": "Resveratrol", "id": "a915e624-9e96-45bd-8f43-f662cb22e88b" },
+  { "name": "Reishi Mushroom", "id": "5f461174-e87b-476c-b430-41591286ad05" },
+  { "name": "Raspberry Ketone", "id": "74de3121-fade-4dec-8c55-5e3f7eae26d8" },
+  { "name": "Quercetin", "id": "5bfe35f2-c742-4887-87a5-a21b164cb255" },
+  { "name": "Propolis", "id": "f483ebb8-b795-42e5-8825-2754ee94f4bb" },
+  { "name": "Black Cohosh", "id": "bf228230-2db3-4d35-97a8-9688594d074e" },
+  { "name": "Turmeric", "id": "207f1625-6bf3-4071-aedb-cf16af4b3e7e" },
+  { "name": "Thunder God Vine", "id": "753961ac-7fc0-471b-965f-289234168ff9" },
+  { "name": "Phosphate Salts", "id": "65959f96-4de0-432c-b2e3-a6deb600ea97" },
+  { "name": "Bilberry", "id": "e2f0f3fa-f0ca-42cd-9f0c-192c16204dd4" },
+  { "name": "Yohimbe", "id": "5778df3b-667b-48e3-b3c8-2d984e7abf58" },
+  { "name": "Pennyroyal", "id": "52bcb493-659a-4976-adc6-ec717f73efd6" },
+  { "name": "Valerian", "id": "a8fd6f96-e848-4a59-8a42-493d1b23f4c0" },
+  { "name": "Peanut Oil", "id": "8c8b19a7-12b6-47ac-a2e7-b6fff15d20d6" },
+  { "name": "Pau D'Arco", "id": "adf94e1c-69db-4421-a50e-1bd644f2c7ac" },
+  { "name": "Papaya", "id": "088a36a8-767e-41b8-b6e4-e6c0dcc1e938" },
+  { "name": "Panax Ginseng", "id": "e5b845ce-62a2-4fc1-be26-364a672fc4ea" },
+  { "name": "Oscillococcinum", "id": "a2b19c81-fb0b-412b-83ea-6254307909db" },
+  { "name": "Palm Oil", "id": "36972c3b-04f0-4de3-a6c5-5cc9042e93a9" },
+  { "name": "Oregano", "id": "634dbb51-8092-4c58-98ae-0857cb1a9e01" },
+  {
+    "name": "Omega-6 Fatty Acids",
+    "id": "fbfebfa0-b08b-4363-98b2-859c167c5a7b"
+  },
+  { "name": "Olive", "id": "49304abc-82bb-4e79-90c4-6c5768e89238" },
+  { "name": "Oats", "id": "3c6b989a-54b0-480b-92ee-7d3337532652" },
+  { "name": "St. John's Wort", "id": "3158a1ff-94ea-4225-9434-11a36b258e9f" },
+  { "name": "Tea Tree Oil", "id": "11704897-4ebb-40b8-8b87-8c44b6f903d9" },
+  { "name": "Niacinamide", "id": "8a2c9c4c-a4d0-4e0f-8744-8157add930a0" },
+  { "name": "Bitter Orange", "id": "7d3229ab-5a60-430a-b09a-307e391cf7c1" },
+  {
+    "name": "N-Acetyl Cysteine (NAC)",
+    "id": "69d6fe3e-19b6-4cc6-aeff-89bb51ae52e2"
+  },
+  {
+    "name": "Methylsulfonylmethane (MSM)",
+    "id": "79e66720-9cd2-48eb-9171-cba5c7823bdf"
+  },
+  { "name": "Mangosteen", "id": "ba911461-129d-4e2e-af8b-a68e5faa7d93" },
+  { "name": "Melatonin", "id": "a3b1b4ec-e751-444f-bf40-7e7e847ad2f8" },
+  { "name": "Maritime Pine", "id": "b2e42d0e-ce64-456e-8de0-a88319006b49" },
+  { "name": "Maca", "id": "47b7041f-b862-454e-a891-3a216a33d45c" },
+  { "name": "Lutein", "id": "998530d6-99e9-440a-a1c1-0ad574a9bada" },
+  { "name": "Lycopene", "id": "ecee251d-a77a-45ab-b51e-8f20f1372777" },
+  {
+    "name": "S-Adenosyl-L-Methionine (SAMe): In Depth",
+    "id": "bf826ba0-d370-42e6-9269-2779da5e499a"
+  },
+  { "name": "L-Tryptophan", "id": "894b2aa2-1bf4-48c5-b3ee-26a6604e451f" },
+  { "name": "Soy", "id": "e7bcf452-a30c-4fa7-b77e-b3827455914b" },
+  { "name": "Lipase", "id": "c0a46e86-e368-4baf-a869-5f0e6f8253fc" },
+  { "name": "Saw Palmetto", "id": "ea668598-8d86-4a7b-8061-d8f0e5d390f0" },
+  { "name": "Sage", "id": "248437fe-a4e0-487b-ab04-d4ff9ef76045" },
+  { "name": "L-Arginine", "id": "61be905a-062f-48de-9f07-9dd96780eb28" },
+  {
+    "name": "Lactobacillus acidophilus",
+    "id": "3da06651-dbfc-4759-8a49-58c55697b4c8"
+  },
+  { "name": "Horsetail", "id": "e8be5ea3-17ee-411c-be21-9e575090c3c2" },
+  { "name": "Horny Goat Weed", "id": "d298d8fb-065e-4b17-85f7-7b29a491e3b2" },
+  { "name": "Red Yeast Rice", "id": "dfde7e9a-34ac-48e9-a5aa-45591fc31ad3" },
+  { "name": "Hops", "id": "da88d010-529c-4832-8993-8d3399dd9221" },
+  {
+    "name": "Hibiscus sabdariffa",
+    "id": "e258427b-6cad-43ca-8b64-9656a073edec"
+  },
+  { "name": "Honey", "id": "8d7172ef-a45b-44d5-977c-a3c95add3187" },
+  { "name": "Red Clover", "id": "00c12efe-f780-40a0-9257-67bc35b61e97" },
+  { "name": "Gymnema", "id": "87b9903f-b14f-4ce0-a7d5-bbe815c59f5f" },
+  { "name": "Guarana", "id": "503d5803-306c-450c-8c77-4e4012552a4d" },
+  { "name": "Green Coffee", "id": "9e452728-f853-4ac9-bbe7-d490bc49f947" },
+  { "name": "Grapefruit", "id": "c2fc21c3-ea4a-4f75-b790-85cda57b0d32" },
+  {
+    "name": "Probiotics: What You Need to Know",
+    "id": "f1b62af9-01c9-40e2-b1dc-30131e678d92"
+  },
+  { "name": "Pomegranate", "id": "5f9f3487-ce95-4d57-b5ac-9770c3b88e7c" },
+  { "name": "Grape", "id": "38e6f3fb-db81-4f25-a060-203d68438279" },
+  { "name": "Goji", "id": "fee46d99-74a3-4362-a927-195b55f0558b" },
+  { "name": "Glucosamine", "id": "b4695eb2-747e-450f-91ff-b016880135a7" },
+  {
+    "name": "Omega-3 Supplements: In Depth",
+    "id": "8c4e5946-c699-438a-8984-f76e4a66857d"
+  },
+  { "name": "Peppermint Oil", "id": "4b9dfd4e-3317-4dd3-9e6d-fda53b8ecafd" },
+  { "name": "Gelatin", "id": "18e2ed7d-76dd-4c59-935a-2b7bc8c0467c" },
+  { "name": "Fucus Vesiculosus", "id": "83df1794-8ea7-4c9c-b465-2c721bb0cec6" },
+  { "name": "Folic Acid", "id": "8ab7ef1f-6f86-4f40-b0b6-5c1dcbefdd89" },
+  { "name": "Mugwort", "id": "78ffb7e8-006d-41f7-ad3d-2d237a0c5156" },
+  { "name": "Milk Thistle", "id": "f5a239b6-65fb-4ac8-8b51-b6b37086e1e6" },
+  { "name": "Noni", "id": "04099eba-cece-40f2-ad53-6ff5ed9f567b" },
+  { "name": "Licorice Root", "id": "f3fd4d13-29c6-45cc-afa4-647e3c09c1c9" },
+  { "name": "Lavender", "id": "0fb09fe2-7272-4b23-b88a-92f55e918422" },
+  { "name": "Eucalyptus", "id": "8f69f5a8-ea2a-492a-973a-a83ea1935a61" },
+  { "name": "Kava", "id": "c55030c0-ea0e-461c-a357-aa620a698c98" },
+  { "name": "Eleuthero", "id": "2cf12a83-0576-4398-ae8e-08d55e634eb6" },
+  { "name": "Horse Chestnut", "id": "838c7e94-01f5-4ab1-ac23-dd3fd06cc340" },
+  { "name": "Hoodia", "id": "272df902-1823-4d47-86ca-7ae12382376a" },
+  { "name": "Dong Quai", "id": "da95d437-ed60-48bd-bec9-c2b758807096" },
+  { "name": "DHEA", "id": "7fc9ba73-7ce0-49a3-bb84-f42d0049b839" },
+  { "name": "Devil's Claw", "id": "60783245-4e85-425b-8d13-2d5247560154" },
+  { "name": "Goldenseal", "id": "532b3670-59dc-4ce5-a38b-a21394f32464" },
+  {
+    "name": "Grape Seed Extract",
+    "id": "a565049f-2d7e-44f2-8f4b-d5925139b84f"
+  },
+  { "name": "Deer Velvet", "id": "31bff774-2a4f-4dbb-8e24-57e16db73aa1" },
+  { "name": "Creatine", "id": "78e1bc4f-d8b6-4313-b7d2-3b76e41bcbf9" },
+  { "name": "Ginkgo", "id": "73108ce3-9a20-4f57-bf6f-4e8b29e01f83" },
+  { "name": "Collagen Peptides", "id": "1ff93ff5-aece-450e-b718-2119870fb50a" },
+  { "name": "Cod Liver Oil", "id": "58e7fd55-6ac7-4b6e-9de1-f5eb29dbb016" },
+  { "name": "Garlic", "id": "4fd0c2b0-cc96-4da0-b20e-c6af3eb54850" },
+  { "name": "Coconut Water", "id": "46c876a9-fe39-478b-a41a-fa67d849ea61" },
+  { "name": "Coconut Oil", "id": "ee565107-58bf-4b01-a542-472e807ce35e" },
+  { "name": "Feverfew", "id": "3dc58d9f-bd66-4160-804b-cd20545a974e" },
+  {
+    "name": "Flaxseed and Flaxseed Oil",
+    "id": "be19e60b-8fd4-4750-9112-f29037e62843"
+  },
+  { "name": "Clove", "id": "74bcd510-9899-4f4f-a3fc-0a3bec33c853" },
+  {
+    "name": "Chondroitin Sulfate",
+    "id": "083f9c13-1e7a-4513-9394-3a0b2e6ee610"
+  },
+  { "name": "Fenugreek", "id": "1e547d95-7155-42b7-aa67-15fa95fcc788" },
+  { "name": "Green Tea", "id": "59f7a4f9-885a-460b-ac3b-f689d5f4dd6a" },
+  { "name": "Cascara Sagrada", "id": "aadc8e4c-f152-4139-9762-e6a12cba09ca" },
+  { "name": "Capsicum", "id": "6452c27e-5784-49fa-86ea-60672cc6dbbe" },
+  { "name": "Cannabidiol (CBD)", "id": "fd2f7238-39be-4926-96cf-9d374467504c" },
+  { "name": "Calendula", "id": "5b58b95e-17a5-4651-87c0-1de696e08db2" },
+  {
+    "name": "Evening Primrose Oil",
+    "id": "94e8809d-84ad-429b-94ab-f0af88f3301a"
+  },
+  { "name": "Boron", "id": "fb17bc33-cc8c-4911-8e78-ea2a0710aadd" },
+  {
+    "name": "European Mistletoe",
+    "id": "d02fc0af-949a-4327-86bb-b034cc84db88"
+  },
+  { "name": "Blue-Green Algae", "id": "1dac6cde-3271-4e8c-b250-61719bdf87fc" },
+  { "name": "Blueberry", "id": "76cd4605-f511-4d5a-9130-18012ec9925f" },
+  { "name": "Ephedra", "id": "2e166c96-ce2b-4fcd-9c4f-6a2cc7deb63a" },
+  { "name": "Blond Psyllium", "id": "7f20e100-3180-452d-b726-eb2ae47869aa" },
+  { "name": "Ashwagandha", "id": "8152046b-6bf1-4f9f-8cbf-0217ccebbfdc" },
+  { "name": "Arnica", "id": "31f2ce16-9aae-4ee2-ab0a-3faeec452f3a" },
+  { "name": "Elderberry", "id": "ca74d994-a7a4-43b7-93df-deada573cda0" },
+  { "name": "Hawthorn", "id": "b4e265a1-0c96-4c60-ab67-2b190fcd0013" },
+  {
+    "name": "Apple Cider Vinegar",
+    "id": "002bbcaa-da8a-4cae-bc53-bdf95e06391b"
+  },
+  { "name": "American Ginseng", "id": "b26b54b9-cc61-4f15-b652-97b67c1e52b9" },
+  { "name": "Alpha-Lipoic Acid", "id": "f346dd38-2d7c-4eef-b306-094f80190a4f" },
+  { "name": "Echinacea", "id": "5a4894e3-2971-4c84-a297-5bcb7b68f3bb" },
+  {
+    "name": "Activated Charcoal",
+    "id": "4d3ee22c-05bd-4236-8af1-75441753aa5e"
+  },
+  { "name": "Alfalfa", "id": "4f021511-000a-4e4d-b810-2a17c85f287a" },
+  { "name": "Ginger", "id": "a1a931f7-a0c1-4760-b284-9cd29e4f5fa8" },
+  { "name": "Dandelion", "id": "cd2471c3-e679-4820-9331-32a641db9823" },
+  {
+    "name": "Colloidal Silver: What You Need to Know",
+    "id": "7df36b60-d4ff-4c2e-895c-d66e5f4b0aef"
+  },
+  { "name": "Chasteberry", "id": "a0873517-f896-49ce-8bca-9acc5042cd07" },
+  { "name": "Cinnamon", "id": "36f94f82-ac72-43f4-ba8c-7c831672a69a" },
+  { "name": "Cat's Claw", "id": "7364804a-9ab6-47db-8fd2-e377d1dd301c" },
+  { "name": "Astragalus", "id": "17e121cb-3b23-4d1e-80ed-d52afd8157a2" },
+  { "name": "Chamomile", "id": "2df3137e-dc2f-428c-9553-d898576666cc" },
+  { "name": "Asian Ginseng", "id": "2f0a201f-4a2e-4c4a-b485-3b3d2070d2ce" },
+  { "name": "Butterbur", "id": "f2490486-3fe7-4680-88c8-dfc168c57c7d" },
+  { "name": "Aloe Vera", "id": "78087842-3efe-4c67-a5f5-ee90694a3c59" },
+  { "name": "Acai", "id": "161cfcb7-336d-44c1-b91f-32feb1bd755b" },
+  { "name": "Cranberry", "id": "13d6aa46-ec9b-4e44-89ea-4586f0cf1c89" }
+]

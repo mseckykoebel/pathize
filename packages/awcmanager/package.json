@@ -1,0 +1,42 @@
+{
+  "name": "awc-manager",
+  "version": "0.0.1",
+  "description": "Turbo module for watch connectivity",
+  "react-native": "js/index",
+  "source": "js/index",
+  "scripts": {
+    "codegen": "node ../../node_modules/react-native/scripts/generate-codegen-artifacts.js --path ../../apps/mobile --outputPath ./generated",
+    "codegen_ios": "node ../../../../node_modules/react-native/scripts/generate-codegen-artifacts.js --path ../../ --outputPath ./generated"
+  },
+  "files": [
+    "js",
+    "android",
+    "ios",
+    "awc-manager.podspec",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "author": "AJ Hesby aj.hesby777@gmail.com (https://github.com/ajaj777)",
+  "homepage": "https://github.com/<your_github_handle>/rtn-calculator#readme",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "codegenConfig": {
+    "name": "AWCManagerSpec",
+    "type": "modules",
+    "jsSrcsDir": "js",
+    "android": {
+      "javaPackageName": "com.awcmanager"
+    }
+  }
+}

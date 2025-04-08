@@ -1,0 +1,31 @@
+{
+  "name": "pathize",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:mobile": "turbo run dev --filter=@pathize/api --filter=@pathize/mobile-ui --filter=@pathize/lib",
+    "lint": "turbo run lint",
+    "start": "turbo run start",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "storybook": "yarn workspace @pathize/mobile storybook",
+    "codepush:staging": "cp -r node_modules/react-native apps/mobile/node_modules && cd apps/mobile && appcenter codepush release-react -a mason-jupiterdx/JupiterDX -d Staging -xp 'ios/jupiter_mobile.xcodeproj/project.pbxproj' -p 'ios/jupiter-mobile-Info.plist' -t '*' -m -x false && rm -rf node_modules/react-native"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^3.0.3",
+    "turbo": "^1.12.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "nohoist": [
+    "**/@react-native-community/checkbox"
+  ],
+  "packageManager": "yarn@3.8.0"
+}

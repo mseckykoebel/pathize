@@ -1,0 +1,55 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+# before_all do
+#   ensure_git_branch(branch: 'master')
+#   git_pull
+# end
+
+platform :android do
+  desc 'Build and publish the android application'
+  lane :build do
+    require 'dotenv'
+    env_option = ENV['FL_ENV']
+    env_file = "../../.env" + (env_option ? ".#{env_option}" : "")
+    Dotenv.load(env_file)
+
+    api_environment = "staging"
+    if ENV["ENVIRONMENT"] == "production"
+      api_environment = "production"
+    end
+    ENV["ENVFILE"] = ".env.#{api_environment}"
+    puts "API_HOST: #{ENV['API_HOST']}"
+    puts "ENVIRONMENT: #{ENV['ENVIRONMENT']}"
+    puts "ENVFILE: #{ENV['ENVFILE']}"
+    puts "api_environment: #{api_environment}"
+    puts "scheme: jupiter_mobile_#{api_environment}"
+
+    gradle(task: 'clean')
+    gradle(
+      task: 'bundle',
+      build_type: 'release',
+      print_command: false,
+      properties: {
+        'android.injected.signing.store.file' => "#{Dir.pwd}/#{ENV['ANDROID_KEYSTORE_FILE']}",
+        'android.injected.signing.store.password' => ENV['ANDROID_KEYSTORE_PASSWORD'],
+        'android.injected.signing.key.alias' => ENV['ANDROID_KEYSTORE_ALIAS'],
+        'android.injected.signing.key.password' => ENV['ANDROID_KEYSTORE_PASSWORD']
+      }
+    )
+  end
+end

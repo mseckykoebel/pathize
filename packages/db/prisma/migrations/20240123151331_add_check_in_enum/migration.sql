@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE `notification_logs` MODIFY `notification_option` ENUM('MAXHR', 'MINHR', 'HR_LIMIT', 'MORNING_REMINDER', 'EVENING_REMINDER', 'ENERGY', 'CHECK_IN') NOT NULL;
+
+-- AlterTable
+ALTER TABLE `notifications` MODIFY `option` ENUM('MAXHR', 'MINHR', 'HR_LIMIT', 'MORNING_REMINDER', 'EVENING_REMINDER', 'ENERGY', 'CHECK_IN') NOT NULL;

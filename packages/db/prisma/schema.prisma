@@ -1,0 +1,800 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id                 String               @id @default(uuid())
+  email              String               @unique
+  password           String               @db.Text // encrypted
+  dateOfBirth        String               @map("date_of_birth")
+  firstName          String               @map("first_name")
+  gender             String?
+  emailNotifications Boolean              @default(true) @map("email_notifications")
+  acceptedTerms      Boolean              @default(false) @map("accepted_terms")
+  timezone           String?
+  timezoneOffset     Int?                 @map("timezone_offset")
+  createdAt          DateTime             @default(now()) @map("created_at")
+  updatedAt          DateTime?            @map("updated_at")
+  phoneNumber        String?              @map("phone_number") @db.Text // encrypted
+  refreshTokens      RefreshToken[]
+  deviceConnection   DeviceConnection[]
+  UserTarget         UserTarget[]
+  DailyData          DailyData[]
+  Crash              Crash[]
+  Illness            Illness[]
+  Insight            Insight[]
+  SymptomRecord      SymptomRecord[]
+  FcmToken           FcmToken[]
+  Notifications      Notification[]
+  UserPreference     UserPreference[]
+  NotificationLog    NotificationLog[]
+  TargetLog          TargetLog[]
+  UserMedication     UserMedication[]
+  MedicationRecord   MedicationRecord[]
+  UserSymptom        UserSymptom[]
+  ClinicalSurvey     ClinicalSurvey[]
+  UserActivity       UserActivity[]
+  ActivityRecord     ActivityRecord[]
+  SleepData          SleepData[]
+  PasswordResetToken PasswordResetToken[]
+
+  // referrals
+  referredUsers Referrals[]    @relation("ReferrerRelation") // mapping to
+  referredBy    Referrals[]    @relation("RefereeRelation") // mapping to
+  ReferralCode  ReferralCode[]
+  Promotion     Promotion[]
+
+  // check-ins
+  CheckIn CheckIn[]
+
+  // pathize ask + messages
+  Message Message[]
+
+  @@index([email]) // index on email to help with performance (if we want to query by email)
+  @@index([id])
+  @@map("users") // map to users table in database
+}
+
+model UserPreference {
+  id                   String    @id @default(uuid())
+  userId               String    @unique @map("user_id") // foreign key
+  createdAt            DateTime  @default(now()) @map("created_at")
+  updatedAt            DateTime? @map("updated_at")
+  notificationsEnabled Boolean   @default(true) @map("notifications_enabled")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("user_preferences") // map to user_preferences table in database
+}
+
+model FcmToken {
+  id        String    @id @default(uuid())
+  token     String    @db.Text // encrypted
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime? @map("updated_at")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  userId    String    @map("user_id") // foreign key
+
+  @@index([userId])
+  @@map("fcm_tokens") // map to fcm_tokens table in database
+}
+
+model UserTarget {
+  id         String    @id @default(uuid())
+  userId     String    @map("user_id") // foreign key
+  targetName Target    @map("target_name") // enum
+  target     String // saving this as a string, as targets could potentially be different quantities or kinds of things
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime? @map("updated_at")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@unique([userId, targetName])
+  @@index([userId])
+  @@map("user_targets") // map to user_targets table in database
+}
+
+model RefreshToken {
+  id           String   @id @default(uuid())
+  userId       String // foreign key
+  refreshToken String   @map("refresh_token") @db.Text // encrypted
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from 
+
+  @@index([userId])
+  @@map("refresh_tokens") // map to refresh_tokens table in database
+}
+
+model PasswordResetToken {
+  id                 String   @id @default(uuid())
+  userId             String // foreign key
+  passwordResetToken String   @map("password_reset_token") @db.Text // encrypted
+  createdAt          DateTime @default(now()) @map("created_at")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from 
+
+  @@index([userId])
+  @@map("password_reset_tokens") // map to password_reset_tokens table in database
+}
+
+model DeviceConnection {
+  id             String         @id @default(uuid())
+  userId         String         @map("user_id") // foreign key
+  resource       DeviceResource
+  terraUserId    String         @unique @map("terra_user_id") // this is the ID that terra sends us after a successful auth with the widget
+  language       Language?      @default(en)
+  historicalData Boolean?       @default(false) @map("historical_data") // whether or not we've called for historical data for this user
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime?      @map("updated_at")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("device_connections") // map to device_connections table in database
+}
+
+model DailyData {
+  id                            String         @id @default(uuid())
+  date                          String
+  terraUserId                   String         @map("terra_user_id")
+  // oxygen data
+  saturationSamples             Json?          @map("saturation_samples")
+  averageSaturationPercentage   Float?         @map("average_saturation_percentage")
+  vo2Samples                    Json?          @map("vo2_samples")
+  vo2MaxMlPerMinPerKg           Float?         @map("vo2_max_ml_per_min_per_kg")
+  // metadata
+  uploadType                    Int?           @map("upload_type")
+  // tag data
+  tagData                       Json?          @map("tag_data")
+  // device data
+  deviceName                    String?        @map("device_name")
+  otherDevices                  Json?          @map("other_devices")
+  hardwareVersion               String?        @map("hardware_version")
+  manufacturer                  String?        @map("manufacturer")
+  softwareVersion               String?        @map("software_version")
+  activationTimestamp           String?        @map("activation_timestamp")
+  serialNumber                  String?        @map("serial_number")
+  // scores
+  recoveryScore                 Float?         @map("recovery_score")
+  activityScore                 Float?         @map("activity_score")
+  sleepScore                    Float?         @map("sleep_score")
+  // DISTANCE DATA
+  // swimming 
+  swimmingNumStrokes            Float?         @map("swimming_num_strokes")
+  swimmingNumLaps               Float?         @map("swimming_num_laps")
+  swimmingPoolLengthMeters      Float?         @map("swimming_pool_length_meters")
+  // elevation
+  floorsClimbed                 Float?         @map("floors_climbed")
+  elevationLossActualMeters     Float?         @map("elevation_loss_actual_meters")
+  elevationMinMeters            Float?         @map("elevation_min_meters")
+  elevationAvgMeters            Float?         @map("elevation_avg_meters")
+  elevationGainActualMeters     Float?         @map("elevation_gain_actual_meters")
+  elevationMaxMeters            Float?         @map("elevation_max_meters")
+  elevationGainPlannedMeters    Float?         @map("elevation_gain_planned_meters")
+  // steps
+  steps                         Float?         @map("steps")
+  stepSamples                   Json?          @map("step_samples")
+  distanceSamples               Json?          @map("distance_samples")
+  elevationSamples              Json?          @map("elevation_samples")
+  distance                      Float?         @map("distance")
+  // MET (metabolic equivalent of task)
+  metSamples                    Json?          @map("met_samples")
+  numLowIntensityMinutes        Float?         @map("num_low_intensity_minutes")
+  numHighIntensityMinutes       Float?         @map("num_high_intensity_minutes")
+  numInactiveMinutes            Float?         @map("num_inactive_minutes")
+  numModerateIntensityMinutes   Float?         @map("num_moderate_intensity_minutes")
+  avgLevel                      Float?         @map("avg_level")
+  // calories
+  netIntakeCalories             Float?         @map("net_intake_calories")
+  bmrCalories                   Float?         @map("bmr_calories")
+  totalCalories                 Float?         @map("total_calories")
+  netActivityCalories           Float?         @map("net_activity_calories")
+  calorieSamples                Json?          @map("calorie_samples")
+  // heart rate data
+  maxHrBpm                      Float?         @map("max_hr_bpm")
+  restingHrBpm                  Float?         @map("resting_hr_bpm")
+  avgHrvRMSSD                   Float?         @map("avg_hrv_rmssd")
+  minHrBpm                      Float?         @map("min_hr_bpm")
+  userMaxHrBpm                  Float?         @map("user_max_hr_bpm")
+  avgHrvSDNN                    Float?         @map("avg_hrv_sdnn")
+  avgHrBpm                      Float?         @map("avg_hr_bpm")
+  // detailed
+  heartRateSamples              Json?          @map("heart_rate_samples")
+  heartRateVarianceSamplesSDNN  Json?          @map("heart_rate_variance_samples_sdnn")
+  heartRateVarianceSamplesRMSSD Json?          @map("heart_rate_variance_samples_rmssd")
+  // active durations data
+  activeSeconds                 Float?         @map("active_seconds")
+  restSeconds                   Float?         @map("rest_seconds")
+  lowIntensitySeconds           Float?         @map("low_intensity_seconds")
+  activityLevelsSamples         Json?          @map("activity_levels_samples")
+  vigorousIntensitySeconds      Float?         @map("vigorous_intensity_seconds")
+  numContinuousInactivePeriods  Float?         @map("num_continuous_inactive_periods")
+  inactivitySeconds             Float?         @map("inactivity_seconds")
+  moderateIntensitySeconds      Float?         @map("moderate_intensity_seconds")
+  standingSeconds               Float?         @map("standing_seconds")
+  // stress data
+  restStressDurationSeconds     Float?         @map("rest_stress_duration_seconds")
+  stressDurationSeconds         Float?         @map("stress_duration_seconds")
+  activityStressDurationSeconds Float?         @map("activity_stress_duration_seconds")
+  avgStressLevel                Float?         @map("avg_stress_level")
+  lowStressDurationSeconds      Float?         @map("low_stress_duration_seconds")
+  mediumStressDurationSeconds   Float?         @map("medium_stress_duration_seconds")
+  stressDataSamples             Json?          @map("stress_data_samples")
+  highStressDurationSeconds     Float?         @map("high_stress_duration_seconds")
+  maxStressLevel                Float?         @map("max_stress_level")
+  // EVERYTHING ELSE
+  resource                      DeviceResource
+  createdAt                     DateTime       @default(now()) @map("created_at")
+  updatedAt                     DateTime?      @map("updated_at")
+  latestWebhookUpdate           DateTime?      @map("latest_webhook_update")
+  user                          User           @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  userId                        String         @map("user_id") // foreign key
+
+  @@index([userId])
+  @@map("daily_data") // map to daily_data table in database
+}
+
+model SleepData {
+  id                               String   @id @default(uuid())
+  date                             String
+  terraUserId                      String   @map("terra_user_id")
+  // sleep durations data
+  durationInBedSeconds             Float?   @map("duration_in_bed_seconds")
+  durationUnmeasurableSleepSeconds Float?   @map("duration_unmeasurable_sleep_seconds")
+  sleepEfficiency                  Float?   @map("sleep_efficiency")
+  hypnogramSamples                 Json?    @map("hypnogram_samples")
+  durationShortInterruptionSeconds Float?   @map("duration_short_interruption_seconds")
+  durationAwakeStateSeconds        Float?   @map("duration_awake_state_seconds")
+  durationLongInterruptionSeconds  Float?   @map("duration_long_interruption_seconds")
+  numWakeupEvents                  Float?   @map("num_wakeup_events")
+  wakeUpLatencySeconds             Float?   @map("wake_up_latency_seconds")
+  numOutOfBedEvents                Float?   @map("num_out_of_bed_events")
+  sleepLatencySeconds              Float?   @map("sleep_latency_seconds")
+  durationLightSleepStateSeconds   Float?   @map("duration_light_sleep_state_seconds")
+  durationAsleepStateSeconds       Float?   @map("duration_asleep_state_seconds")
+  numRemEvents                     Float?   @map("num_rem_events")
+  durationDeepSleepStateSeconds    Float?   @map("duration_deep_sleep_state_seconds")
+  // device data
+  deviceName                       String?  @map("device_name")
+  otherDevices                     Json?    @map("other_devices")
+  hardwareVersion                  String?  @map("hardware_version")
+  manufacturer                     String?  @map("manufacturer")
+  softwareVersion                  String?  @map("software_version")
+  activationTimestamp              String?  @map("activation_date")
+  serialNumber                     String?  @map("serial_number")
+  // metadata
+  uploadType                       Float?   @map("upload_type")
+  // heartRateData
+  maxHrBpm                         Float?   @map("max_hr_bpm")
+  avgHrvRMSSD                      Float?   @map("avg_hrv_rmssd")
+  minHrBpm                         Float?   @map("min_hr_bpm")
+  userMaxHrBpm                     Float?   @map("user_max_hr_bpm")
+  avgHrBpm                         Float?   @map("avg_hr_bpm")
+  avgHrvSDNN                       Float?   @map("avg_hrv_sdnn")
+  restingHrBpm                     Float?   @map("resting_hr_bpm")
+  // detailed
+  heartRateSamples                 Json?    @map("heart_rate_samples")
+  heartRateVarianceSamplesSDNN     Json?    @map("heart_rate_variance_samples_sdnn")
+  heartRateVarianceSamplesRMSSD    Json?    @map("heart_rate_variance_samples_rmssd")
+  // temperature data
+  temperatureDelta                 Float?   @map("temperature_delta")
+  // readiness data
+  readinessScore                   Float?   @map("readiness_score")
+  recoveryLevel                    Float?   @map("recovery_level")
+  // respiration data
+  minBreathsPerMin                 Float?   @map("min_breaths_per_min")
+  avgBreathsPerMin                 Float?   @map("avg_breaths_per_min")
+  maxBreathsPerMin                 Float?   @map("max_breaths_per_min")
+  onDemandReading                  Boolean? @map("on_demand_reading")
+  respirationDataEndTime           String?  @map("respiration_data_end_time")
+  respirationDataSamples           Json?    @map("respiration_data_samples")
+  respirationDataStartTime         String?  @map("respiration_data_start_time")
+  // snoring data
+  numSnoringEvents                 Float?   @map("num_snoring_events")
+  totalSnoringDurationSeconds      Float?   @map("total_snoring_duration_seconds")
+  snoringDataEndTime               String?  @map("snoring_data_end_time")
+  snoringDataSamples               Json?    @map("snoring_data_samples")
+  snoringDataStartTime             String?  @map("snoring_data_start_time")
+  // o2 data
+  oxygenSaturationDataStartTime    String?  @map("oxygen_saturation_data_start_time")
+  oxygenSaturationDataEndTime      String?  @map("oxygen_saturation_data_end_time")
+  oxygenSaturationDataSamples      Json?    @map("oxygen_saturation_data_samples")
+
+  // EVERYTHING ELSE
+  resource            DeviceResource
+  createdAt           DateTime       @default(now()) @map("created_at")
+  updatedAt           DateTime?      @map("updated_at")
+  latestWebhookUpdate DateTime?      @map("latest_webhook_update")
+  user                User           @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  userId              String         @map("user_id") // foreign key
+
+  @@index([userId])
+  @@map("sleep_data")
+}
+
+model Crash {
+  id             String    @id @default(uuid())
+  userId         String    @map("user_id") // foreign key
+  createdDay     String    @map("created_day")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  time           String // time of crash
+  severity       Int?
+  crashTotalTime Int?      @map("crash_total_time")
+  updatedAt      DateTime? @map("updated_at")
+  notes          String?   @db.LongText // notes about crash
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("crashes") // map to crashes table in database
+}
+
+model UserSymptom {
+  id            String          @id @default(uuid())
+  userId        String          @map("user_id") // foreign key
+  symptomId     String?         @map("symptom_id") // if a symptom id is not present, it is a custom symptom
+  createdAt     DateTime        @default(now()) @map("created_at")
+  name          String?
+  category      String?
+  updatedAt     DateTime?       @map("updated_at")
+  description   String?
+  notes         String?         @db.LongText // notes about this symptom
+  SymptomRecord SymptomRecord[]
+
+  // relations
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  CheckInSymptom CheckInSymptom[]
+
+  @@index([userId])
+  @@map("user_symptoms") // map to crashes table in database
+}
+
+model SymptomRecord {
+  id            String    @id @default(uuid())
+  userId        String    @map("user_id") // foreign key
+  symptomId     String?   @map("symptom_id") // if this symptom record has an associated symptomId found in the sympotoms database. if it is not present, it is custom
+  userSymptomId String?   @map("user_symptom_id") // (TODO: make not null) foreign key that points the id of the user symptom this record is associated with
+  createdDay    String    @map("created_day") // LOCAL
+  createdAt     DateTime  @default(now()) @map("created_at") // UTC
+  updatedAt     DateTime? @map("updated_at") // UTC
+  name          String
+  time          String
+
+  description String?
+  category    String
+  severity    Int?    @map("symptom_severity")
+
+  // relations
+  // user
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  userSymptom UserSymptom? @relation(fields: [userSymptomId], references: [id], onDelete: Cascade) // mapping from
+  // checkIn (was this recorded as part of a check-in)
+  checkIn     CheckIn?     @relation(fields: [checkInId], references: [id], onDelete: Cascade) // mapping from
+  checkInId   String?      @map("check_in_id")
+
+  @@index([userId])
+  @@index([userSymptomId])
+  @@index([checkInId])
+  @@map("symptoms") // map to symotoms table table in database
+}
+
+model SymptomDb {
+  id                 String  @id @default(uuid())
+  symptomId          String  @unique @map("symptom_id") // the ID of the symptom
+  symptomName        String? @map("symptom_name") // the name of the symptom
+  symptomCategory    String? @map("symptom_category") // the category of the symptom
+  symptomDescription String? @map("symptom_description") // the description of the symptom
+
+  @@map("symptom_db") // map to symptom_db table in database
+}
+
+////
+// USER-SAVED MEDICATIONS AND THEIR RECORDS
+////
+
+model UserMedication {
+  id               String             @id @default(uuid())
+  userId           String             @map("user_id")
+  medicationId     String?            @map("medication_id") // if a medicationId is present, it is not a custom medication
+  medicationName   String?            @map("medication_name") // TODO: must be made not null
+  createdAt        DateTime           @default(now()) @map("created_at")
+  updatedAt        DateTime?          @map("updated_at")
+  notes            String?            @db.LongText // notes about this medication the user has recorded
+  type             String
+  unit             String?
+  strength         Float?
+  MedicationRecord MedicationRecord[]
+
+  // relations
+  user              User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  CheckInMedication CheckInMedication[]
+
+  @@index([userId])
+  @@map("user_medications") // map to user_medications table in database
+}
+
+model MedicationRecord {
+  id               String    @id @default(uuid())
+  userId           String    @map("user_id") // foreign key
+  medicationId     String?   @map("medication_id") // if this medication record has an associated medicationId
+  userMedicationId String?   @map("user_medication_id") // (TODO: make not null) foreign key that points the id of the user medication this record is associated with
+  medicationName   String?   @map("medication_name") // TODO: must be made not null
+  createdDay       String    @map("created_day") // LOCAL
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime? @map("updated_at")
+  time             String // time of medication occuring
+  notes            String?   @db.LongText // notes about this medication record
+  type             String? // TODO: this is not strictly needed, but should be forded in later
+  unit             String?
+  strength         Float?
+
+  // relations
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userMedication UserMedication? @relation(fields: [userMedicationId], references: [id], onDelete: Cascade)
+  // checkIn (was this recorded as part of a check-in)
+  checkIn        CheckIn?        @relation(fields: [checkInId], references: [id], onDelete: Cascade) // mapping from
+  checkInId      String?         @map("check_in_id")
+
+  @@index([userId])
+  @@index([userMedicationId])
+  @@index([checkInId])
+  @@map("medications") // map to medication_records table in database
+}
+
+model MedicationDb {
+  id             String  @id @default(uuid())
+  medicationId   String? @unique @map("medication_id") // the ID of the medication
+  medicationName String? @map("medication_name") // the name of the medication
+
+  @@map("medication_db") // map to medication_db table in database
+}
+
+model UserActivity {
+  id               String    @id @default(uuid())
+  userId           String    @map("user_id") // foreign key
+  activityId       String?   @map("activity_id") // if it has an ID, then it means that it is from our database
+  activityName     String    @map("activity_name") // defined if a custom activity
+  activityIcon     String    @map("activity_icon") // defined if a custom activity
+  activityPriority Int?      @map("activity_priority") // priority of this activity
+  notes            String?   @db.LongText // notes about this activity the user has recorded
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime? @map("updated_at")
+
+  // relations
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  ActivityRecord ActivityRecord[]
+
+  @@index([userId])
+  @@map("user_activities") // map to user_activities table in database
+}
+
+model ActivityRecord {
+  id                        String    @id @default(uuid())
+  userId                    String    @map("user_id") // foreign key
+  activityIcon              String    @map("activity_icon") // defined if a custom activity, duplicating for displaying in UI
+  activityName              String    @map("activity_name") // defined if a custom activity, duplicating for displaying in UI
+  activityPriority          Int?      @map("activity_priority") // priority of this activity, duplicating for displaying in UI
+  activityTotalTime         Int?      @map("activity_total_time") // total time of this activity, duplicating for displaying in UI
+  activityPhysicalExertion  Int?      @map("activity_physical_exertion") // physical exertion of this activity, duplicating for displaying in UI
+  activityCognitiveExertion Int?      @map("activity_cognitive_exertion") // mental exertion of this activity, duplicating for displaying in UI
+  activityEmotionalExertion Int?      @map("activity_emotional_exertion") // emotional exertion of this activity, duplicating for displaying in UI
+  time                      String // time of activity occuring
+  notes                     String?   @db.LongText // notes about this activity record
+  createdDay                String    @map("created_day") // LOCAL
+  createdAt                 DateTime  @default(now()) @map("created_at")
+  updatedAt                 DateTime? @map("updated_at")
+
+  // relations
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  userActivity   UserActivity? @relation(fields: [userActivityId], references: [id], onDelete: Cascade) // mapping from
+  userActivityId String?       @map("user_activity_id") // foreign key
+
+  @@index([userId])
+  @@index([userActivityId])
+  @@map("activities") // map to activity_records table in database
+}
+
+model ActivityDb {
+  id               String  @id @default(uuid())
+  activityId       String  @unique @map("activity_id") // the ID of the activity
+  activityName     String? @map("activity_name") // the name of the activity
+  activityCategory String? @map("activity_category") // the category of the activity
+
+  @@map("activity_db") // map to activity_db table in database
+}
+
+model Illness {
+  id            String    @id @default(uuid())
+  userId        String    @map("user_id") // foreign key
+  name          String
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime? @map("updated_at")
+  infectionDate DateTime? @map("infection_date")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("illnesses") // map to conditions table in database
+}
+
+model Insight {
+  id                       String    @id @default(uuid())
+  userId                   String    @map("user_id") // foreign key
+  createdAt                DateTime  @default(now()) @map("created_at")
+  updatedAt                DateTime? @map("updated_at")
+  avgSevenDayAboveBaseline Float?    @map("avg_seven_day_above_baseline")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("insights") // map to insights table in database
+}
+
+model ClinicalSurvey {
+  id                                                   String    @id @default(uuid())
+  userId                                               String    @map("user_id") // foreign key
+  medicalProblemsHavePreventedMeFromAccomplishingGoals Int       @map("medical_problems_have_prevented_me_from_accomplishing_goals")
+  completelyOverwhelmedByMedicalProblems               Int       @map("completely_overwhelmed_by_medical_problems")
+  levelOfPain                                          Int       @map("level_of_pain")
+  levelOfEnergy                                        Int       @map("level_of_energy")
+  qualityOfSleep                                       Int       @map("quality_of_sleep")
+  levelOfMemoryProblems                                Int       @map("level_of_memory_problems")
+  createdAt                                            DateTime  @default(now()) @map("created_at") // assuming createdAt and the day it was filled out is the same
+  updatedAt                                            DateTime? @map("updated_at")
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("clinical_surveys") // map to clinical_surveys table in database
+}
+
+model Notification {
+  id        String             @id @default(uuid())
+  userId    String             @map("user_id") // foreign key
+  createdAt DateTime           @default(now()) @map("created_at")
+  updatedAt DateTime?          @map("updated_at")
+  option    NotificationOption // enum
+  value     Int?               @map("value") // if there is a value associated with this notification
+  time      DateTime? // if there is a time associated with this notification
+  enabled   Boolean            @default(true) // is this notification enabled? default to true upon creation
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("notifications") // map to notification_preferences table in database
+}
+
+model NotificationLog {
+  id                  String             @id @default(uuid())
+  userId              String             @map("user_id") // foreign key
+  createdAt           DateTime           @default(now()) @map("created_at")
+  updatedAt           DateTime?          @map("updated_at")
+  latestWebhookUpdate DateTime?          @map("latest_webhook_update")
+  notificationOption  NotificationOption @map("notification_option") // time of notification
+  value               Int?
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("notification_logs") // map to notification_logs table in database
+}
+
+model TargetLog {
+  id         String    @id @default(uuid())
+  userId     String    @map("user_id") // foreign key
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime? @map("updated_at")
+  value      Int?
+  targetName Target
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("target_logs") // map to target_logs table in database
+}
+
+////
+// REFERRALS
+////
+
+model Referrals {
+  id                   String    @id @default(uuid())
+  createdAt            DateTime  @default(now()) @map("created_at")
+  updatedAt            DateTime? @map("updated_at")
+  referrerUserId       String    @map("referrer_user_id") // foreign key
+  refereeUserId        String    @map("referee_user_id") // foreign key
+  referrerReferralCode String?   @map("referrer_referral_code") // foreign key
+
+  // relations
+  referrerUser User          @relation("ReferrerRelation", fields: [referrerUserId], references: [id], onDelete: Cascade)
+  refereeUser  User          @relation("RefereeRelation", fields: [refereeUserId], references: [id], onDelete: Cascade)
+  referrerCode ReferralCode? @relation("ReferralCodeRelation", fields: [referrerReferralCode], references: [code], onDelete: Cascade)
+
+  @@unique([referrerUserId, refereeUserId])
+  @@index([referrerUserId])
+  @@index([refereeUserId])
+  @@index([referrerReferralCode])
+  @@map("referrals") // map to referrals table in database
+}
+
+// handles the creation of a unique referral code
+model ReferralCode {
+  id        String    @id @default(uuid())
+  userId    String    @map("user_id") // foreign key
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime? @map("updated_at")
+  code      String    @unique @db.VarChar(8)
+
+  // relations
+  user     User        @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  referral Referrals[] @relation("ReferralCodeRelation") // where this code was used
+
+  @@index([userId])
+  @@map("referral_codes") // map to referral_codes table in database
+}
+
+model Promotion {
+  id                  String              @id @default(uuid())
+  userId              String              @map("user_id") // foreign key
+  createdAt           DateTime            @default(now()) @map("created_at")
+  updatedAt           DateTime?           @map("updated_at")
+  applied             Boolean             @default(false) // whether or not this code has been applied
+  promotionIdentifier PromotionIdentifier
+  promotionType       PromotionType
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("promotions") // map to promotions table in database
+}
+
+////
+// CHECK-INS
+////
+
+model CheckIn {
+  id                   String    @id @default(uuid())
+  userId               String    @map("user_id") // foreign key
+  name                 String
+  createdAt            DateTime  @default(now()) @map("created_at")
+  updatedAt            DateTime? @map("updated_at")
+  notificationsEnabled Boolean   @default(true) @map("notifications_enabled")
+  time                 DateTime
+
+  // medications and symptoms
+  medications CheckInMedication[]
+  symptoms    CheckInSymptom[]
+
+  // relations
+  user             User               @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+  SymptomRecord    SymptomRecord[]
+  MedicationRecord MedicationRecord[]
+
+  @@index([userId])
+  @@map("check_ins") // map to check_ins table in database
+}
+
+model CheckInMedication {
+  checkInId        String @map("check_in_id")
+  userMedicationId String @map("user_medication_id")
+
+  checkIn        CheckIn        @relation(fields: [checkInId], references: [id], onDelete: Cascade)
+  userMedication UserMedication @relation(fields: [userMedicationId], references: [id], onDelete: Cascade)
+
+  @@id([checkInId, userMedicationId])
+  @@index([checkInId])
+  @@index([userMedicationId])
+  @@map("check_in_medications")
+}
+
+model CheckInSymptom {
+  checkInId     String @map("check_in_id")
+  userSymptomId String @map("user_symptom_id")
+
+  checkIn     CheckIn     @relation(fields: [checkInId], references: [id], onDelete: Cascade)
+  userSymptom UserSymptom @relation(fields: [userSymptomId], references: [id], onDelete: Cascade)
+
+  @@id([checkInId, userSymptomId])
+  @@index([checkInId])
+  @@index([userSymptomId])
+  @@map("check_in_symptoms")
+}
+
+////
+// PATHIZE ASK
+////
+
+model Message {
+  id            String   @id @default(uuid())
+  userId        String   @map("user_id")
+  messageId     String   @map("message_id")
+  assistantId   String   @map("assistant_id")
+  createdAt     DateTime @default(now()) @map("created_at") // while createdAtUnix is sufficient, we capture createdAt to be consistent with other models
+  createdAtUnix Int      @map("createdAtUnix") // UNIX timestamp, which is obtained from openAI
+  threadId      String   @map("thread_id")
+  role          Role
+  content       String   @db.Text // encrypted; string content of the message itself
+  annotations   Json?    @map("annotations") // annotations from openAI, as an array of strings
+  fileIds       Json?    @map("file_ids") // if any files were used, we give their IDs here
+
+  // relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) // mapping from
+
+  @@index([userId])
+  @@map("messages")
+}
+
+////
+// ENUMS
+////
+
+enum NotificationOption {
+  MAXHR
+  MINHR
+  HR_LIMIT
+  MORNING_REMINDER
+  EVENING_REMINDER
+  ENERGY
+  CHECK_IN
+}
+
+enum Target {
+  BASELINE
+  ENERGY_BUDGET
+}
+
+enum DeviceResource {
+  FITBIT
+  GARMIN
+  GOOGLE
+  POLAR
+  APPLE
+  OURA
+}
+
+enum Language {
+  en
+}
+
+enum PromotionIdentifier {
+  p_free_1m_v1
+  p_free_3m_v1
+  PH1M2023
+}
+
+enum PromotionType {
+  OFFER_CODE
+  PROMOTIONAL_OFFER
+}
+
+// PATHIZE ASK
+
+enum Role {
+  ASSISTANT
+  USER
+}

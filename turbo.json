@@ -1,0 +1,45 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalEnv": [
+    "PORT",
+    "NODE_ENV",
+    "TERRA_DEV_ID",
+    "TERRA_API_KEY",
+    "TERRA_SIGNING_SECRET",
+    "PUBLIC_ACCESS_TOKEN_KEY",
+    "PRIVATE_ACCESS_TOKEN_KEY",
+    "PUBLIC_REFRESH_TOKEN_KEY",
+    "PRIVATE_REFRESH_TOKEN_KEY",
+    "PUBLIC_ENCRYPTION_KEY",
+    "PRIVATE_ENCRYPTION_KEY",
+    "PUBLIC_PASSWORD_RESET_TOKEN_KEY",
+    "PRIVATE_PASSWORD_RESET_TOKEN_KEY",
+    "FIREBASE_PRIVATE_KEY",
+    "NOTION_API_KEY",
+    "NOTION_DATABASE_ID",
+    "CIO_API_KEY_1",
+    "OPENAI_SECRET_KEY",
+    "OPENAI_ORGANIZATION_ID"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": [],
+      "outputMode": "new-only"
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "cache": false
+    }
+  }
+}

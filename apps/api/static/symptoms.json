@@ -1,0 +1,392 @@
+[
+  {
+    "id": "d8e6f1c6-1d6c-4e13-8d7f-ebfb11911d08",
+    "name": "Unrefreshing sleep",
+    "category": "Sleep",
+    "description": "Inadequate or disturbed sleep that fails to provide restorative rest."
+  },
+  {
+    "id": "1442c3a3-8d23-4c45-9b23-42ebaa1b43c4",
+    "name": "Daytime drowsiness",
+    "category": "Sleep",
+    "description": "Excessive daytime sleepiness, or, a desire to sleep or take a nap during the day."
+  },
+  {
+    "id": "8dce6d39-92f3-4720-8d29-1c9da79f0d16",
+    "name": "Difficulty Staying Asleep",
+    "category": "Sleep",
+    "description": "Difficulty initiating or maintaining sleep, also known as insomnia."
+  },
+  {
+    "id": "464e3458-4e4d-4b4f-bad5-857aeb9cbf5e",
+    "name": "Waking up early",
+    "category": "Sleep",
+    "description": "Waking up earlier than desired, feeling unrefreshed or tired."
+  },
+  {
+    "id": "4c1b1964-cbb9-4263-9a7a-d444de332d01",
+    "name": "Heavy feeling",
+    "category": "Physical",
+    "description": "Feeling of heaviness in body, limbs, or head."
+  },
+  {
+    "id": "e6c10ad4-2d4c-4d4b-a9d1-3f3c6a7ba37d",
+    "name": "Mental Fatigue",
+    "category": "Physical",
+    "description": "Feeling of exhaustion, difficulty concentrating."
+  },
+  {
+    "id": "9c1f3a3a-44c3-4a11-8c84-baee97b20f84",
+    "name": "Fatigue",
+    "category": "Physical",
+    "description": "Feeling of tiredness, lack of energy."
+  },
+  {
+    "id": "c46b3838-7072-4dd2-a9c9-d8e63f82c26d",
+    "name": "Muscle weakness",
+    "category": "Physical",
+    "description": "Loss of strength in muscles, reduced physical ability."
+  },
+  {
+    "id": "861188be-e4f4-45ce-a7e9-f57583453ca4",
+    "name": "Shortness of breath",
+    "category": "Respiratory",
+    "description": "Feeling of breathlessness, difficulty breathing."
+  },
+  {
+    "id": "1e66a602-3b0e-409e-8e73-d0d2674d80eb",
+    "name": "Cough",
+    "category": "Respiratory",
+    "description": "Expelling air from lungs due to irritation, inflammation, or infection."
+  },
+  {
+    "id": "c1f2b2a1-5b1f-4b0f-9f9a-8f9f9f9f9f9f",
+    "name": "Chest pain",
+    "category": "Respiratory",
+    "description": "Pain or discomfort in the chest area."
+  },
+  {
+    "id": "f1f05a83-9b63-4c97-be71-1014e1f869cd",
+    "name": "Irregular heartbeat (arrhythmia)",
+    "category": "Heart",
+    "description": "An abnormal heart rhythm, irregular heartbeat or palpitations."
+  },
+  {
+    "id": "fb1b6626-d46b-4692-a3f6-804b876dfa5e",
+    "name": "Elevated heartbeat",
+    "category": "Heart",
+    "description": "Increased heart rate, above normal resting level."
+  },
+  {
+    "id": "30f7526c-c00c-45aa-91b5-1b2b1456f212",
+    "name": "Rash",
+    "category": "Physical",
+    "description": "Skin irritation, redness or inflammation."
+  },
+  {
+    "id": "2b896c65-a232-4a68-9236-d8062e1199f0",
+    "name": "Pins and needles",
+    "category": "Physical",
+    "description": "Tingling or prickling sensation in the skin."
+  },
+  {
+    "id": "0be66547-4f04-43fa-840a-4a26fa81b2cd",
+    "name": "Tinnitus (ringing in ears)",
+    "category": "Physical",
+    "description": "Ringing, buzzing or other noises in the ears."
+  },
+  {
+    "id": "6f5b386b-d84b-4563-ae77-4b24b766d0dd",
+    "name": "Brain fog",
+    "category": "Neurological",
+    "description": "Difficulty concentrating, mental fatigue, confusion."
+  },
+  {
+    "id": "2e573d62-0fa2-4da8-8b47-c137a1a78b95",
+    "name": "Difficulty remembering",
+    "category": "Neurological",
+    "description": "Difficulty recalling information, forgetfulness."
+  },
+  {
+    "id": "fd8a0df4-fd20-4549-b166-8b8a2e24219f",
+    "name": "Trouble paying attention",
+    "category": "Neurological",
+    "description": "Difficulty focusing, easily distracted."
+  },
+  {
+    "id": "1a8c3b3f-14d4-4f31-8f4c-c4cf039a0fb2",
+    "name": "Trouble forming words",
+    "category": "Neurological",
+    "description": "Difficulty articulating words or phrases, slurring."
+  },
+  {
+    "id": "36c39d51-c0f3-401d-9f5b-8ed66f3a3dbf",
+    "name": "Difficulty understanding",
+    "category": "Neurological",
+    "description": "Difficulty comprehending or processing information."
+  },
+  {
+    "id": "b3efc141-fdff-4b8c-9f99-4d70c02e4e4f",
+    "name": "Difficulty focusing",
+    "category": "Neurological",
+    "description": "Difficulty concentrating attention on a task."
+  },
+  {
+    "id": "d1aa04e7-cde5-4c18-9f5d-ef5ed3a5b6e1",
+    "name": "Slowness of thought",
+    "category": "Neurological",
+    "description": "Mental sluggishness, slow thinking."
+  },
+  {
+    "id": "69b4cafe-74e4-4ea4-a864-889f7387a963",
+    "name": "Sensitivity to noise",
+    "category": "Neurological",
+    "description": "Heightened awareness of sounds, discomfort or pain from noise."
+  },
+  {
+    "id": "3e9d930d-8bc7-4eb1-a790-d69e45e81b8f",
+    "name": "Sensitivity to Light",
+    "category": "Neurological",
+    "description": "Increased sensitivity to light, discomfort or pain from bright lights."
+  },
+  {
+    "id": "3f5c2e1d-9f0e-4b80-ae67-738f69c0a0d1",
+    "name": "Sensitivity to Smells",
+    "category": "Neurological",
+    "description": "Heightened awareness or discomfort to certain smells."
+  },
+  {
+    "id": "3e4c2c0e-f1d2-46ed-8768-608f473c55b4",
+    "name": "Unpleasant smell",
+    "category": "Neurological",
+    "description": "Offensive or unpleasant odor perceived by the nose."
+  },
+  {
+    "id": "58411991-7d9f-4b3d-9c4e-1527a1fbf6a8",
+    "name": "Unable to focus vision",
+    "category": "Neurological",
+    "description": "Difficulty focusing or maintaining visual attention."
+  },
+  {
+    "id": "c79d9b35-9f9c-4bde-9b67-6b527d9050a8",
+    "name": "Loss of depth perception",
+    "category": "Neurological",
+    "description": "Difficulty judging the distance and spatial relationship of objects."
+  },
+  {
+    "id": "0a53e283-692c-4639-8b93-bec17c09721f",
+    "name": "Twitching",
+    "category": "Neurological",
+    "description": "Involuntary muscle movement or spasm."
+  },
+  {
+    "id": "d184f46b-2231-41dd-aa56-3d3c8e177cc3",
+    "name": "Absent mindedness",
+    "category": "Neurological",
+    "description": "Lack of attention or forgetfulness due to preoccupation."
+  },
+  {
+    "id": "1056b7af-9a62-427e-abb1-86aa07ae2d05",
+    "name": "Anxiety",
+    "category": "Neurological",
+    "description": "Feeling of unease, fear, worry, or apprehension."
+  },
+  {
+    "id": "2448d73d-862f-4891-b4eb-23817a54d99a",
+    "name": "Depression",
+    "category": "Neurological",
+    "description": "Persistent feeling of sadness, hopelessness, or low mood."
+  },
+  {
+    "id": "3f3523e6-971a-4fb0-a0d3-5f7a66f9e5ca",
+    "name": "Dizziness",
+    "category": "Neurological",
+    "description": "Feeling of lightheadedness or unsteadiness, vertigo."
+  },
+  {
+    "id": "b0e6d126-6fb5-4fa8-8d9e-1d135c441d29",
+    "name": "Sore throat",
+    "category": "Immune",
+    "description": "Pain, irritation or discomfort in the throat."
+  },
+  {
+    "id": "b52cb812-3f3f-42c2-ae98-37c8f9f3eb64",
+    "name": "Lymph nodes",
+    "category": "Immune",
+    "description": "Swollen or tender lymph nodes, part of immune system."
+  },
+  {
+    "id": "d5c6eb5b-df5b-4d7f-af4c-4ad6c32d7035",
+    "name": "Fever",
+    "category": "Immune",
+    "description": "Elevated body temperature, often due to infection or inflammation."
+  },
+  {
+    "id": "4b56dc7a-8e9d-4f3c-8b44-416b8c5d28b5",
+    "name": "High temperature",
+    "category": "Immune",
+    "description": "Elevated body temperature above normal range."
+  },
+  {
+    "id": "0a3aa31a-2e97-4f9e-9a31-f75b1ab162fa",
+    "name": "Flu-like symptoms",
+    "category": "Immune",
+    "description": "Symptoms resembling those of the flu, including fever, fatigue, muscle aches, and respiratory symptoms."
+  },
+  {
+    "id": "d3f02e3e-3d16-4e0c-9f1f-22c2b491ebdd",
+    "name": "Cold limbs",
+    "category": "Endocrine",
+    "description": "Decreased temperature or poor blood flow to the limbs, making them feel cold."
+  },
+  {
+    "id": "5f8c2f25-455a-4f9c-bd05-3b4c1424a616",
+    "name": "Chills",
+    "category": "Endocrine",
+    "description": "Shivering or feeling cold despite adequate clothing or warm environment."
+  },
+  {
+    "id": "d1b8df3e-1023-4e92-a7f9-8d21c59fa1bb",
+    "name": "Feeling hot",
+    "category": "Endocrine",
+    "description": "Sensation of feeling warm or hot."
+  },
+  {
+    "id": "6d40e6f5-6be5-45e9-b9ee-12e0de3056f5",
+    "name": "Night sweats",
+    "category": "Endocrine",
+    "description": "Excessive sweating during sleep, often soaking through clothing and bedding."
+  },
+  {
+    "id": "c065d7b4-8c1b-4e50-9cd9-c5d8a5fb5a5b",
+    "name": "Sweating hands",
+    "category": "Endocrine",
+    "description": "Excessive sweating of the palms."
+  },
+  {
+    "id": "d326526d-8b48-4c51-a121-17e9d320aa8b",
+    "name": "Weight change",
+    "category": "Endocrine",
+    "description": "Increase or decrease in body weight beyond normal variations."
+  },
+  {
+    "id": "729083d3-d998-4221-8dd2-ff7689e6a1d6",
+    "name": "Loss of appetite",
+    "category": "Endocrine",
+    "description": "Decreased desire to eat or loss of interest in food."
+  },
+  {
+    "id": "91b5f5c1-15b2-4b61-8d4c-575f7a9d4b0d",
+    "name": "Low temperature",
+    "category": "Endocrine",
+    "description": "Body temperature below normal range."
+  },
+  {
+    "id": "7fc8e0bc-6f34-4a4d-af8e-c10f2122c4c4",
+    "name": "Muscle pain",
+    "category": "Pain",
+    "description": "Aching or soreness in muscles due to overuse or injury."
+  },
+  {
+    "id": "0c8d88fc-09b3-46e9-9cc7-1d874d1235f5",
+    "name": "Headache",
+    "category": "Pain",
+    "description": "Pain or discomfort in the head, scalp or neck."
+  },
+  {
+    "id": "3ef3fbb1-6a02-4d53-9b91-9c67a0f8e0cf",
+    "name": "Eye pain",
+    "category": "Pain",
+    "description": "Pain or discomfort in or around the eyes."
+  },
+  {
+    "id": "6d2737b4-4e2e-4f47-b12a-7b9dfb6f13c6",
+    "name": "Soreness",
+    "category": "Pain",
+    "description": "Pain or discomfort in muscles, joints or tissues."
+  },
+  {
+    "id": "cc98b78e-5d5e-4b92-890c-8d0c721fa755",
+    "name": "Joint pain",
+    "category": "Pain",
+    "description": "Pain or discomfort in joints, often due to inflammation or injury."
+  },
+  {
+    "id": "8cf9e74d-7d4b-4d4c-bd02-1f4c1e2915bf",
+    "name": "Bloating",
+    "category": "Gastrointestinal",
+    "description": "Feeling of fullness, swelling or discomfort in the abdomen."
+  },
+  {
+    "id": "3d3b5105-5f5c-42d8-bb29-98aee95c0aa7",
+    "name": "Bladder issues",
+    "category": "Gastrointestinal",
+    "description": "Problems with urination, such as pain, urgency, or incontinence."
+  },
+  {
+    "id": "2fb8d204-31f1-42f9-a142-7d1026f3d3b3",
+    "name": "Sensitivity to alcohol",
+    "category": "Gastrointestinal",
+    "description": "Adverse physical reaction to alcohol consumption, including flushing, nausea, or headache."
+  },
+  {
+    "id": "058f6a84-6b9f-4f2d-bf70-77cfa6d8e74a",
+    "name": "Stomach pain",
+    "category": "Gastrointestinal",
+    "description": "Pain or discomfort in the abdomen or stomach area."
+  },
+  {
+    "id": "a5a59fcf-1628-4e9b-9b06-1c3990672f5d",
+    "name": "Diarrhea",
+    "category": "Gastrointestinal",
+    "description": "Frequent passage of loose or watery stools."
+  },
+  {
+    "id": "4d0e15a0-32a8-46ea-9ef7-ec1bb00d2abe",
+    "name": "Nausea",
+    "category": "Gastrointestinal",
+    "description": "Feeling of sickness or discomfort in the stomach, often accompanied by an urge to vomit."
+  },
+  {
+    "id": "2e9e7fc5-986c-4e70-93c8-856146f54d16",
+    "name": "Nausea when standing up from being seated or upright",
+    "category": "Orthostatic",
+    "description": "Feeling of nausea that occurs upon standing or sitting up."
+  },
+  {
+    "id": "3b3bbfeb-fa38-4049-a1b1-b84b27d8c3f1",
+    "name": "Chest pain when standing up from being seated or upright",
+    "category": "Orthostatic",
+    "description": "Chest pain that occurs upon standing or sitting up."
+  },
+  {
+    "id": "882d17e6-73a7-43c6-9a7a-37f6600d7c5e",
+    "name": "Feeling unsteady when standing up from being seated or upright",
+    "category": "Orthostatic",
+    "description": "Feeling of unsteadiness or imbalance upon standing or sitting up."
+  },
+  {
+    "id": "4cf46fcb-66fa-4b08-9c8f-296b19d0b1f1",
+    "name": "Shortness of breath when standing up from being seated or upright",
+    "category": "Orthostatic",
+    "description": "Feeling of difficulty breathing that occurs upon standing or sitting up."
+  },
+  {
+    "id": "c7daa437-bcf5-4d17-bd9a-7f07c840b16d",
+    "name": "Dizziness when standing up from being seated or upright",
+    "category": "Orthostatic",
+    "description": "Feeling of lightheadedness, faintness, or unsteadiness upon standing or sitting up."
+  },
+  {
+    "id": "23c2f6e4-4cf4-4b4e-b46f-1f9bb1a8a136",
+    "name": "Irregular heartbeat (arrhythmia) when standing up from being seated or upright",
+    "category": "Orthostatic",
+    "description": "An abnormal heart rhythm, irregular heartbeat or palpitations upon standing or sitting up."
+  },
+  {
+    "id": "c7b09f80-186f-4def-ae64-21b63bdfe0ae",
+    "name": "Elevated heartbeat when standing up from being seated or upright",
+    "category": "Orthostatic",
+    "description": "A sudden increase in heart rate upon standing or sitting up."
+  }
+]

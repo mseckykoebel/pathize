@@ -1,0 +1,10 @@
+[
+    {
+      "id": 2,
+      "timestamp": "2022-08-04T12:42:45.727135+00:00",
+      "systolic": "125",
+      "diastolic": "75",
+      "type": "cuff",
+      "unit": "mmHg"
+    }
+  ]

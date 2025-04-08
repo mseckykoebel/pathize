@@ -1,0 +1,96 @@
+# Resolve react_native_pods.rb with node to allow for hoisting
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+platform :ios, '14.0'
+prepare_react_native_project!
+
+# If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
+# because `react-native-flipper` depends on (FlipperKit,...) that will be excluded
+#
+# To fix this you can also exclude `react-native-flipper` using a `react-native.config.js`
+# ```js
+# module.exports = {
+#   dependencies: {
+#     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
+# ```
+flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+# # apply necessary codegen steps for turbo module WITHOUT setting RCT_NEW_ARCH_ENABLED=1
+# ENV['USE_CODEGEN_DISCOVERY'] = "1"
+# run with the new architecture
+# ENV['RCT_NEW_ARCH_ENABLED'] = "1"
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
+
+target 'jupiter_mobile' do
+  # https://rnfirebase.io/#altering-cocoapods-to-use-frameworks
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
+  
+  config = use_native_modules!
+
+  # Flags change depending on the env values.
+  flags = get_default_flags()
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # Hermes is now enabled by default. Disable by setting this flag to false.
+    # Upcoming versions of React Native may rely on get_default_flags(), but
+    # we make it explicit here to aid in the React Native upgrade process.
+    :hermes_enabled => flags[:hermes_enabled],
+    :fabric_enabled => flags[:fabric_enabled],
+    
+    # Enables Flipper.
+    #
+    # Note that if you have use_frameworks! enabled, Flipper will not work and
+    # you should disable the next line.
+    # :flipper_configuration => flipper_config,
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  # hack to get terra podfile to work, for the time being
+  # pod 'TerraiOS', :git => 'https://github.com/tryterra/TerraiOS', :branch => 'local-normalisation'
+
+  target 'jupiter_mobileTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  post_install do |installer|
+    # https://github.com/facebook/react-native/blob/main/scripts/react_native_pods.rb#L197-L202
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false
+    )
+
+    # if ENV['RCT_NEW_ARCH_ENABLED'] == '1'
+    #   # the temporary new architecture fix for react-native-slider detailed here
+    #   # https://github.com/callstack/react-native-slider/issues/529
+    #   installer.pods_project.targets.each do |target|
+    #   # if target.name == "react-native-slider"
+    #     append_header_search_path(target, "${PODS_ROOT}/../../../../node_modules/react-native/ReactCommon")
+    #     #append_header_search_path(target, "${PODS_ROOT}/../../../../node_modules/react-native/ReactCommon/react")
+    #   # end
+    #   end
+    # end
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+  end
+end
+
+# the temporary new architecture fix for react-native-slider detailed here
+# https://github.com/callstack/react-native-slider/issues/529
+# def append_header_search_path(target, path)
+#   target.build_configurations.each do |config|
+#       # Note that there's a space character after `$(inherited)`.
+#       config.build_settings["HEADER_SEARCH_PATHS"] ||= "$(inherited) "
+#       config.build_settings["HEADER_SEARCH_PATHS"] << path
+#   end
+# end

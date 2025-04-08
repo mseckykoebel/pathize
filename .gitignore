@@ -1,0 +1,32 @@
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# misc
+.DS_Store
+*.pem
+
+# next.js
+.next/
+out/
+build
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# turbo
+.turbo
+
+# yarn 3 files
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

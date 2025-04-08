@@ -1,0 +1,180 @@
+import React, {useContext} from 'react';
+import Animated, {
+  AnimatedProps,
+  Easing,
+  useAnimatedProps,
+  useDerivedValue,
+  withRepeat,
+  withSequence,
+  withTiming,
+} from 'react-native-reanimated';
+import {Circle, CircleProps} from 'react-native-svg';
+import {getYForX} from 'react-native-redash';
+
+import {LineChartDimensionsContext} from './Chart';
+import {LineChartPathContext} from './LineChartPathContext';
+import {useLineChart} from './useLineChart';
+import {mapToMaxVal} from './utils';
+
+const AnimatedCircle = Animated.createAnimatedComponent(Circle);
+
+export type LineChartDotProps = {
+  dotProps?: AnimatedProps<CircleProps>;
+  outerDotProps?: AnimatedProps<CircleProps>;
+  color?: string;
+  inactiveColor?: string;
+  showInactiveColor?: boolean;
+  at: number;
+  size?: number;
+  hasPulse?: boolean;
+  hasOuterDot?: boolean;
+  /**
+   * If `always`, the outer dot will still animate when interaction is active.
+   *
+   * If `while-inactive`, the outer dot will animate only when the interaction is inactive.
+   *
+   * Default: `while-inactive`
+   */
+  pulseBehaviour?: 'always' | 'while-inactive';
+  /**
+   * Defaults to `size * 4`
+   */
+  outerSize?: number;
+  pulseDurationMs?: number;
+};
+
+LineChartDot.displayName = 'LineChartDot';
+
+export function LineChartDot({
+  at,
+  color: defaultColor = 'black',
+  dotProps,
+  hasOuterDot: defaultHasOuterDot = false,
+  hasPulse = false,
+  inactiveColor,
+  outerDotProps,
+  pulseBehaviour = 'while-inactive',
+  pulseDurationMs = 800,
+  showInactiveColor = true,
+  size = 4,
+  outerSize = size * 4,
+}: LineChartDotProps) {
+  const {isActive, mapPointsToFixedRange} = useLineChart();
+  const {
+    parsedPath,
+    pointWidth,
+    pathWidth: width,
+  } = useContext(LineChartDimensionsContext);
+
+  ////////////////////////////////////////////////////////////
+
+  const {isInactive: _isInactive} = useContext(LineChartPathContext);
+  const isInactive = showInactiveColor && _isInactive;
+  const color = isInactive ? inactiveColor || defaultColor : defaultColor;
+  const opacity = isInactive && !inactiveColor ? 0.5 : 1;
+  const hasOuterDot = defaultHasOuterDot || hasPulse;
+
+  ////////////////////////////////////////////////////////////
+
+  const x = useDerivedValue(
+    () =>
+      withTiming(
+        mapPointsToFixedRange
+          ? mapToMaxVal(pointWidth + at, width)
+          : pointWidth + at,
+      ),
+    [at, pointWidth],
+  );
+  const y = useDerivedValue(
+    () => withTiming(getYForX(parsedPath!, x.value) || 0),
+    [parsedPath, x],
+  );
+
+  ////////////////////////////////////////////////////////////
+
+  const animatedDotProps = useAnimatedProps(
+    () => ({
+      cx: x.value,
+      cy: y.value,
+    }),
+    [x, y],
+  );
+
+  const animatedOuterDotProps = useAnimatedProps(() => {
+    let defaultProps = {
+      cx: x.value,
+      cy: y.value,
+      opacity: 0.1,
+      r: outerSize,
+    };
+
+    if (!hasPulse) {
+      return defaultProps;
+    }
+
+    if (isActive.value && pulseBehaviour === 'while-inactive') {
+      return {
+        ...defaultProps,
+        r: 0,
+      };
+    }
+
+    const easing = Easing.out(Easing.sin);
+    const animatedOpacity = withRepeat(
+      withSequence(
+        withTiming(0.8),
+        withTiming(0, {
+          duration: pulseDurationMs,
+          easing,
+        }),
+      ),
+      -1,
+      false,
+    );
+    const scale = withRepeat(
+      withSequence(
+        withTiming(0),
+        withTiming(outerSize, {
+          duration: pulseDurationMs,
+          easing,
+        }),
+      ),
+      -1,
+      false,
+    );
+
+    if (pulseBehaviour === 'while-inactive') {
+      return {
+        ...defaultProps,
+        opacity: isActive.value ? withTiming(0) : animatedOpacity,
+        r: isActive.value ? withTiming(0) : scale,
+      };
+    }
+    return {
+      ...defaultProps,
+      opacity: animatedOpacity,
+      r: scale,
+    };
+  }, [hasPulse, isActive, outerSize, pulseBehaviour, pulseDurationMs, x, y]);
+
+  ////////////////////////////////////////////////////////////
+
+  return (
+    <>
+      <AnimatedCircle
+        animatedProps={animatedDotProps}
+        r={size}
+        fill={color}
+        opacity={opacity}
+        {...dotProps}
+      />
+      {hasOuterDot && (
+        <AnimatedCircle
+          animatedProps={animatedOuterDotProps}
+          fill={color}
+          {...outerDotProps}
+        />
+      )}
+    </>
+  );
+}

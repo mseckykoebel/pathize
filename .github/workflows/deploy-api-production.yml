@@ -1,0 +1,16 @@
+name: Deploy @pathize/api to production
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Deploy server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: "flyctl deploy --remote-only --config apps/api/fly/production/fly.toml"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
